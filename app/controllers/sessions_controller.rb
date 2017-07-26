@@ -8,7 +8,9 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session[:user_id] = nil
+    binding.pry
+    session.clear
+    binding.pry
     redirect_to landing_page_path
   end
 

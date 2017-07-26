@@ -58,6 +58,7 @@ FactoryGirl.define do
     end
     extension 'txt'
     data_url 'http://textfiles.com/100/914bbs.txt'
+    user
 
     factory :image_binary do
       name 'imgur'

@@ -1,6 +1,6 @@
 class Users::UsersController < Users::BaseController
   def show
-
+    # binding.pry
   end
 
   def edit

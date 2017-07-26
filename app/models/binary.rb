@@ -6,6 +6,7 @@ class Binary < ApplicationRecord
   belongs_to :folder
   has_many :comments
   has_many :likes, as: :likeable
+  belongs_to :user
 
   enum status: %w(active inactive)
 

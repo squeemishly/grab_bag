@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170725202430) do
+ActiveRecord::Schema.define(version: 20170726213217) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,7 +23,9 @@ ActiveRecord::Schema.define(version: 20170725202430) do
     t.integer  "folder_id"
     t.string   "data_url"
     t.integer  "status",     default: 0
+    t.integer  "user_id"
     t.index ["folder_id"], name: "index_binaries_on_folder_id", using: :btree
+    t.index ["user_id"], name: "index_binaries_on_user_id", using: :btree
   end
 
   create_table "comments", force: :cascade do |t|
@@ -101,6 +103,7 @@ ActiveRecord::Schema.define(version: 20170725202430) do
   end
 
   add_foreign_key "binaries", "folders"
+  add_foreign_key "binaries", "users"
   add_foreign_key "comments", "binaries"
   add_foreign_key "comments", "users"
   add_foreign_key "folders", "folders"

@@ -9,10 +9,12 @@ feature 'log_in' do
       stub_oauth
 
       visit landing_page_path
+      # save_and_open_page
 
       within '.welcome' do
         click_on 'Login with Facebook'
       end
+      # save_and_open_page
 
       expect(current_path).to eq("/#{user.username}/home")
       expect(page).to have_content user.username

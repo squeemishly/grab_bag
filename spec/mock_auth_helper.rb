@@ -4,7 +4,7 @@ RSpec.configure do
 
     auth_hash = {
       "provider"=>"facebook",
-      "uid"=>"10103559484486366",
+      "uid"=>ENV['facebook_uid'],
       "info"=> {
         "email"=>ENV['facebook_email'],
         "name"=>ENV['facebook_name'],
@@ -12,14 +12,14 @@ RSpec.configure do
       },
       "credentials"=> {
         "token"=> ENV['facebook_token'],
-        "expires_at"=>1500238611,
+        "expires_at"=>1532637615,
         "expires"=>true
       },
       "extra"=> {
         "raw_info"=> {
           "name"=>ENV['facebook_name'],
           "email"=>ENV['facebook_email'],
-          "id"=>"10103559484486366"
+          "id"=>ENV['facebook_uid']
         }
       }
     }

@@ -9,25 +9,29 @@ RSpec.describe Binary do
 
   context 'Attributes' do
     it 'is invalid without a name' do
-      file = Binary.new(folder_id: 1, data_url: text, extension: 'txt')
+      user = create(:user)
+      file = Binary.new(folder_id: 1, data_url: text, extension: 'txt', user_id: user.id)
 
       expect(file).to_not be_valid
     end
 
     it 'is invalid without an extension' do
-      file = Binary.new(name: 'test', folder_id: 1, data_url: text)
+      user = create(:user)
+      file = Binary.new(name: 'test', folder_id: 1, data_url: text, user_id: user.id)
 
       expect(file).to_not be_valid
     end
 
     it 'is invalid without a folder' do
-      file = Binary.new(name: 'sam.pdf', data_url: text, extension: 'txt')
+      user = create(:user)
+      file = Binary.new(name: 'sam.pdf', data_url: text, extension: 'txt', user_id: user.id)
 
       expect(file).to_not be_valid
     end
 
     it 'is invalid without a data_url' do
-      file = Binary.new(name: 'sam.pdf', folder_id: 1, extension: 'txt')
+      user = create(:user)
+      file = Binary.new(name: 'sam.pdf', folder_id: 1, extension: 'txt', user_id: user.id)
 
       expect(file).to_not be_valid
     end
@@ -38,7 +42,8 @@ RSpec.describe Binary do
       file = Binary.new(name: 'sam.pdf',
                         extension: '.pdf',
                         folder: folder,
-                        data_url: text)
+                        data_url: text,
+                        user_id: user.id)
 
       expect(file).to be_valid
     end
@@ -59,7 +64,7 @@ RSpec.describe Binary do
       user = create :user
       folder = user.home
 
-      file = Binary.new(name: 'sam.pdf', folder: folder, data_url: text)
+      file = Binary.new(name: 'sam.pdf', folder: folder, data_url: text, user_id: user.id)
 
       expect(file.folder).to be folder
     end

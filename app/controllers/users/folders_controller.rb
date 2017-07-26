@@ -2,7 +2,9 @@ class Users::FoldersController < Users::BaseController
   before_action :folder_authorize, only: [:destroy]
 
   def show
-    user = User.find_by(username: params[:username])
+    # user = User.find_by(username: params[:username])
+    # binding.pry
+    @photos = current_user.binaries
 
     if @current_folder = current_folder
       session[:folder_id] = @current_folder.id

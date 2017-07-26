@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   get '/sign_up', to: 'sign_up#new'
   post '/sign_up', to: 'sign_up#create'
-  get 'signout', to: 'sessions#destroy', as: 'signout'
+  get '/signout', to: 'sessions#destroy', as: 'signout'
 
   resources :public_folders, only: :index
   namespace :users, path: ":username" do
