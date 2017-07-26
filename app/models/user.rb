@@ -42,7 +42,7 @@ class User < ApplicationRecord
       user.avatar_url = auth["info"]["image"]
       user.token = auth["credentials"]["token"]
     end
-    
+
   end
   def disable
     self.owned_folders.update_all(status: "inactive")

@@ -1,5 +1,5 @@
 User can log in using facebook
-User can log in using instagram
+<!-- User can log in using instagram -->
 User cannot log in using just their email
 
 User can OAuth with facebook
