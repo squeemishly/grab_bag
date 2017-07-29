@@ -4,7 +4,7 @@ class FacebookService
   def initialize(user)
     @uid = user.fb_id
     @token = user.token
-    @conn = Faraday.new("https://graph.facebook.com/v2.10/")
+    @conn = ApiCaller.new("https://graph.facebook.com/v2.10/")
   end
 
   def uploaded_photos_call
