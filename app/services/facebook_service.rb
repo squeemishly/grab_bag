@@ -5,7 +5,7 @@ class FacebookService
   end
 
   def self.uploaded_photos_call(user)
-    response = Faraday.get("https://graph.facebook.com/v2.10/#{user.fb_id}/photos?type=uploaded&fields=created_time,from,id,images,name,link,place,comments{like_count,comment_count,message,likes,from},tags{id,name},reactions{id,name,username,type}&access_token=#{user.token}")
+    response = ApiCaller.get("https://graph.facebook.com/v2.10/#{user.fb_id}/photos?type=uploaded&fields=created_time,from,id,images,name,link,place,comments{like_count,comment_count,message,likes,from},tags{id,name},reactions{id,name,username,type}&access_token=#{user.token}")
     response_json = JSON.parse(response.body, symbolize_names: true)[:data]
     # uploaded_photos_call(response_json[:paging][:next]) if response_json[:paging][:next]
   end
