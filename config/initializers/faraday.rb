@@ -1,5 +1,5 @@
 class ApiCaller
-  def self.get(url)
-    Faraday.get(url)
+  def self.new(url)
+    Faraday.new(url)
   end
 end
