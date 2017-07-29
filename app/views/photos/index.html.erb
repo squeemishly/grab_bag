@@ -1,0 +1,18 @@
+<!-- <h1><%= @photos.count %> facebook photos</h1> -->
+
+<!-- Google includes -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD33BmqULy-JQUPZlHt9fyAsOwsEvD2Gwg&callback=initGoogleMap" defer></script>
+
+<!-- amCharts includes -->
+<script src="https://www.amcharts.com/lib/3/ammap.js"></script>
+<script src="https://www.amcharts.com/lib/3/maps/js/worldHigh.js"></script>
+<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+<%= javascript_include_tag "ammap.js" %>
+
+<!-- HTML -->
+<div id="maps">
+  <div id="gmap" class="mapdiv" style="visibility: visible;"></div>
+  <div id="ammap" class="mapdiv" style="visibility: visible;"></div>
+</div>
+
+
