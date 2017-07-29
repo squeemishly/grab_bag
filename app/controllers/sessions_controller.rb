@@ -17,6 +17,7 @@ class SessionsController < ApplicationController
   def facebook_user
     if user = User.find_by(fb_id: request.env['omniauth.auth']['uid'])
       session[:user_id] = user.id
+      binding.pry
       FacebookPhotoWorker.perform_async(current_user)
       redirect_to user.home.url
     else
