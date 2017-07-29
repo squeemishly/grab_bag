@@ -6,13 +6,15 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
         get '/user', to: "users#show"
-        get '/file/adjectives', to: "file#topwords_adjectives"
-        get '/file/nouns', to: "file#topwords_nouns"
-        get '/file/american', to: "file#american?"
+      namespace :file do
+        get '/adjectives', to: "file#topwords_adjectives"
+        get '/nouns', to: "file#topwords_nouns"
+        get '/american', to: "file#american?"
       namespace :meta_data do
         namespace :photos do
           get '/locations', to: "locations#index"
           get '/locations_by_year', to: 'locations#show'
+          get '/camera_details', to: 'camera#show'
         end
       end
     end
