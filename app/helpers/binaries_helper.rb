@@ -21,7 +21,7 @@ private
   end
 
   def text_preview(binary)
-    response = Faraday.get(binary.data_url)
+    response = ApiCaller.get(binary.data_url)
     text = response.body
 
     simple_format text
