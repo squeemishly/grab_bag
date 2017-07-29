@@ -1,6 +1,7 @@
 class Photos
 
   def self.get_data(user)
+    binding.pry
     photo_data = FacebookService.get_data(user)
     photo_data.each do |photo|
       if MetaDataPhoto.find_by(fb_photo_id: photo[:id]) == nil
