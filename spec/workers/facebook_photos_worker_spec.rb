@@ -23,11 +23,18 @@ RSpec.describe FacebookPhotoWorker do
 =======
       binding.pry
 
+<<<<<<< HEAD
       expect(FbComment.count).to eq 100
       expect(FbPlace.count).to eq 1
       expect(FbReaction.count).to eq 362
       expect(FbTag.count).to eq 5
 >>>>>>> set up relationships between User and MetaDataPhotos, wrote test for FacebookPhotoWorker
+=======
+      expect(FbComment.count).to eq 0
+      expect(FbPlace.count).to eq 0
+      expect(FbReaction.count).to eq 0
+      expect(FbTag.count).to eq 0
+>>>>>>> working on stubbing out test
     end
   end
 end
