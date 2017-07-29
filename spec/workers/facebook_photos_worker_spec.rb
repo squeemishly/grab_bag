@@ -4,8 +4,8 @@ RSpec.describe FacebookPhotoWorker do
   it "pulls the metadata from facebook photos" do
     Sidekiq::Testing.inline! do
       user = create(:user,
-                    fb_id: ENV['fb_test_uid'],
-                    token: ENV['fb_test_token']
+                    fb_id: ENV['facebook_uid'],
+                    token: ENV['facebook_token']
                     )
 
       expect(FbComment.count).to eq 0

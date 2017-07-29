@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "FacebookService" do
   context "class methods" do
     it ".get_data(user)" do
-      user = create(:user, fb_id: ENV['fb_test_uid'], token: ENV['fb_test_token'])
+      user = create(:user, fb_id: ENV['facebook_uid'], token: ENV['facebook_token'])
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
       photos_data = FacebookService.get_data(user)
