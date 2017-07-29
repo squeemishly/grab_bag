@@ -23,9 +23,7 @@ ActiveRecord::Schema.define(version: 20170727215030) do
     t.integer  "folder_id"
     t.string   "data_url"
     t.integer  "status",     default: 0
-    t.integer  "user_id"
     t.index ["folder_id"], name: "index_binaries_on_folder_id", using: :btree
-    t.index ["user_id"], name: "index_binaries_on_user_id", using: :btree
   end
 
   create_table "comments", force: :cascade do |t|
@@ -108,10 +106,10 @@ ActiveRecord::Schema.define(version: 20170727215030) do
     t.integer  "binaries_id"
     t.string   "text"
     t.integer  "word_count"
-    t.string   "top_adjective"
-    t.string   "top_noun"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.string   "top_adjective", default: [],              array: true
+    t.string   "top_noun",      default: [],              array: true
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.index ["binaries_id"], name: "index_meta_data_files_on_binaries_id", using: :btree
     t.index ["user_id"], name: "index_meta_data_files_on_user_id", using: :btree
   end
@@ -163,7 +161,6 @@ ActiveRecord::Schema.define(version: 20170727215030) do
   end
 
   add_foreign_key "binaries", "folders"
-  add_foreign_key "binaries", "users"
   add_foreign_key "comments", "binaries"
   add_foreign_key "comments", "users"
   add_foreign_key "fb_comments", "meta_data_photos"
