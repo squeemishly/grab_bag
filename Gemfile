@@ -41,6 +41,7 @@ gem 'faker', :git => 'git://github.com/stympy/faker.git', :branch => 'master'
 gem 'exifr'
 gem 'json'
 gem 'redis'
+gem 'sidekiq'
 
 
 group :development, :test do
