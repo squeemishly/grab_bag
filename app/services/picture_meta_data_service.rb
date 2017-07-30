@@ -17,6 +17,7 @@ class PictureMetaDataService
       info.update_attributes(long: exifr.gps.longitude,
                               lat: exifr.gps.latitude)
     end
+    binding.pry
   end
 
 

@@ -19,6 +19,7 @@ class FileMetaDataService
 
   end
 
+
   private
 
   attr_reader :yomu, :user, :tgr, :binary_id
