@@ -6,7 +6,7 @@ $.ajax({
         // var keys = Object.keys(json_data);
         // var values = Object.values(json_data);
         var keys = ['Jerry', 'Kelly', 'Annie', 'Bobbie', 'Joan'];
-        var values = [15, 12, 10, 9, 7]
+        var values = [15, 12, 10, 9, 7];
           var ctx = document.getElementById('likers').getContext('2d');
           var myChart = new Chart(ctx, {
             type: 'bar',
