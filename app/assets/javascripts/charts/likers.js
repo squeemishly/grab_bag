@@ -11,22 +11,28 @@ $.ajax({
             data: {
               labels: ['Jerry', 'Kelly', 'Annie', 'Bobbie', 'Joan'],
               datasets: [{
-                data: [5,6,7,8,9],
+                data: [15, 12, 10, 9, 7],
                 label: "# of Likes",
                 backgroundColor: "#2ecc71"
                   }]
+            },
+            options: {
+              title: {
+                display: true,
+                position: 'top',
+                fontColor: '#2ecc71',
+                text: 'Top 5 People Who Like Your Facebook Photos'
+              },
+              scales: {
+                  yAxes: [{
+                      ticks: {
+                          beginAtZero:true
+                      }
+                  }]
+              }
             }
           });
 
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero:true
-                }
-            }]
-        }
     }
 });
 
