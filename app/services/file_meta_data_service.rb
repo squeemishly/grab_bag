@@ -11,7 +11,6 @@ class FileMetaDataService
   def collect
     text = yomu.text.to_s.delete!("\n")
     words = text_detector(text)
-    binding.pry
     MetaDataFile.create!(text: text,
                       word_count: text.length,
                       extension: extension,
