@@ -11,25 +11,61 @@ The goal of this project was to 'clone' the base functionality of Dropbox.
 
 To set up a local copy of this project, perform the following:
 
-* Clone the repository: `git clone https://github.com/glassjoseph/grab_bag.git`
+* Clone the repository: `git clone https://github.com/squeemishly/dark_clout`
 * `cd` into the project's directory
 * Run `bundle install`
 * Run `bundle exec rake db:{create,migrate,seed}` to set up the database locally and seed it with files, folders, users, and comments
-* To login as an admin (in development), use these credentials - username: admin1, password: password
-* Run the application in the dev environment with `rails s`
+* run `brew update`
+* Check java version with `java -version`
+* If you don't have java installed go to http://www.oracle.com/technetwork/java/javase/downloads/index.html
+* Once java is installed run `rvm install jruby`
+* Run `jruby --version` to ensure it is installed
+* If you run `rails s` you should get an error that rails is not installed. Follow the prompt to install rails.
+* Run `bundle update`
+* Run `bundle install`
+
+### Environment Variables
+You will need to procure your own environment variables for the following:
+* facebook_key:
+* facebook_secret:
+* facebook_name:
+* facebook_email:
+* facebook_token:
+* facebook_uid:
+* AWS_ACCESS_KEY_ID:
+* AWS_SECRET_ACCESS_KEY:
+* S3_BUCKET:
+
+You can setup your redis keys as the standard:
+* REDIS_HOST: 'localhost'
+* REDIS_PORT: '6379'
+
+
+
+### Running the Application
+
+* To run the application in the dev environment, you'll need several tabs in your terminal:
+* `rails s`
+* `redis-server`
+* `bundle exec sidekiq`
 * Visit http://localhost:3000/ and enjoy
+
+To login as an admin (in development), use these credentials:
+* username: admin1
+* password: password
+
 
 ### Schema
 
 A visual representation of the schema is here:
-![schema pic](app/assets/images/24_may_schema.png?raw=true)
+![schema pic](app/assets/images/30_july_schema.png?raw=true)
 
 
 ### Features
 
 #### Visitor
  * A visitor is an un-logged in user
- * He can view public folders, and that's about it
+ * A visitor can view public folders, and that's about it
 
 #### User
  * A user can sign up for an account via Facebook or create one manually
