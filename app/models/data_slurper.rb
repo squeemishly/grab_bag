@@ -22,7 +22,7 @@ class DataSlurper
 
   def file_slurping
     yomu = Yomu.new(path)
-    FileMetaDataService.new(yomu, user, binary_id).collect
+    FileMetaDataService.new(yomu, user, binary_id, extension).collect
   end
 
   def picture_slurping
