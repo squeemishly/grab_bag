@@ -1,4 +1,16 @@
-var icon = "M21.25,8.375V28h6.5V8.375H21.25zM12.25,28h6.5V4.125h-6.5V28zM3.25,28h6.5V12.625h-6.5V28z";
+var locations = [ {
+      "latitude": 40.3951,
+      "longitude": -73.5619,
+      "type": "circle",
+      "color": "#6c00ff",
+      "zoomLevel": 5,
+    }, {
+      "latitude": 40.3961,
+      "longitude": -73.5629,
+      "type": "circle",
+      "color": "#6c00ff",
+      "zoomLevel": 5,
+    } ]
 /**
  * Create the amCharts Map
  */
@@ -8,15 +20,7 @@ var ammap = AmCharts.makeChart( "ammap", {
   "zoomDuration": 0,
   "dataProvider": {
     "map": "worldLow",
-        "images": [ {
-      "latitude": 40.3951,
-      "longitude": -73.5619,
-      "svgPath": icon,
-      "color": "#CC0000",
-      "scale": 0.5,
-      "label": "New York",
-      "labelShiftY": 2
-    } ],
+        "images": locations,
     "getAreasFromMap": true
   },
   "areasSettings": {
