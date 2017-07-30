@@ -1,9 +1,10 @@
 class FileMetaDataService
 
-  def initialize(meta_object, current_user, binary_id = nil)
+  def initialize(meta_object, current_user, binary_id = nil, extension = nil)
     @yomu = meta_object
     @user = current_user
     @binary_id = binary_id.to_i
+    @extension = extension
     @tgr = EngTagger.new
   end
 
@@ -12,6 +13,7 @@ class FileMetaDataService
     words = text_detector(text)
     MetaDataFile.create!(text: text,
                       word_count: text.length,
+                      extension: extension,
                       top_adjective: rank_words(words, :adjectives),
                       top_noun: rank_words(words, :nouns),
                       user_id: @user.id,
@@ -21,7 +23,7 @@ class FileMetaDataService
 
   private
 
-  attr_reader :yomu, :user, :tgr, :binary_id
+  attr_reader :yomu, :user, :tgr, :binary_id, :extension
 
   def text_detector(text)
     output = {}
