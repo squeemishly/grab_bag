@@ -69,13 +69,21 @@ class UploadLogicHelper
   def find_real_english(list)
     list = list
     counter = 0
-    output = queens_english.map do |word|
+    queens_english.map do |word|
       if list.include?(word)
         counter += 1
       end
     end
+    count_sanitizer(list.count, counter)
+  end
+
+  def count_sanitizer(word_count, counter)
     json_output = {}
-    json_output[:commonwealth] = (list.count/counter)
+    if counter == 0
+      json_output[:commonwealth] = 0
+    else
+      json_output[:commonwealth] = (list.count/counter)
+    end
     json_output
   end
 
