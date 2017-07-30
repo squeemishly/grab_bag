@@ -17,7 +17,7 @@ class Api::V1::FileController < ApplicationController
   end
 
   def document_types
-    binding.pry
+    render json: UploadLogicHelper.new(current_user).document_types
   end
 
 end

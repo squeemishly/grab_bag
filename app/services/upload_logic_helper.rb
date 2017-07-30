@@ -21,9 +21,30 @@ class UploadLogicHelper
     camera_models
   end
 
+  def document_types
+    file_types
+  end
+
 
   private
   attr_reader :user, :queens_english
+
+  def file_types
+    files = MetaDataFile.where(user_id: user.id)
+    photos = MetaDataPhoto.where(user_id: user.id).count
+    types = extract_file_types(files)
+    json_output = rank_words(types)
+    json_output[:img] = photos
+    json_output
+  end
+
+  def extract_file_types(list)
+    types = []
+    list.each do |photo|
+      types << photo.extension
+    end
+    types
+  end
 
   def camera_models
     list = MetaDataPhoto.where(user_id: user.id)

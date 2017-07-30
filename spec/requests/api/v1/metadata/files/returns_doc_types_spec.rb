@@ -22,8 +22,8 @@ describe "api endpoint returns doc types" do
     metadata_9 = MetaDataPhoto.create(width: 1400, height: 1000, model: "Sony A300", shutter_speed: "1/500", aperture: 22.2, lat: 12.12323, long: 112.451234, user_id: user.id)
     metadata_10 = MetaDataPhoto.create(width: 1400, height: 1000, model: "X100F", shutter_speed: "1/500", aperture: 22.2, lat: 12.65751, long: 132.445454, user_id: user.id)
 
-    metadata_11 = MetaDataFile.create(user_id: user.id, binaries_id: binary.id)
-    metadata_12 = MetaDataFile.create(user_id: user.id, binaries_id: binary_2.id)
+    metadata_11 = MetaDataFile.create(user_id: user.id, binaries_id: binary.id, extension: "pdf")
+    metadata_12 = MetaDataFile.create(user_id: user.id, binaries_id: binary_2.id, extension: "docx")
 
 
 
@@ -31,5 +31,9 @@ describe "api endpoint returns doc types" do
     get '/api/v1/file/document_types'
 
     results = JSON.parse(response.body)
+
+    expect(results["pdf"]).to eq(1)
+    expect(results["docx"]).to eq(1)
+    expect(results["img"]).to eq(10)
   end
 end
