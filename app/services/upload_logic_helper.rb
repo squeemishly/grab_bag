@@ -82,7 +82,7 @@ class UploadLogicHelper
     if counter == 0
       json_output[:commonwealth] = 0
     else
-      json_output[:commonwealth] = (list.count/counter)
+      json_output[:commonwealth] = word_count/counter
     end
     json_output
   end
