@@ -3,7 +3,7 @@ class DataSlurper
   def initialize(path, extension, current_user, binary_id)
     @path = path
     @extension = extension
-    @pictures = (%w(jpeg tiff))
+    @pictures = (%w(jpeg tiff jpg))
     @files = (%w(docx pdf doc xls xlsx ppt pptx))
     @user = current_user
     @binary_id = binary_id

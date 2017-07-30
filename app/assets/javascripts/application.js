@@ -19,6 +19,7 @@
 //= require materialize
 //= require materialize-sprockets
 //= require materialize/extras/nouislider
+//= require charts/verbage_pie_chart
 //= require_tree .
 
 $(function() {

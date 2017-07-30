@@ -17,9 +17,27 @@ class UploadLogicHelper
     american_nouns
   end
 
+  def camera_types
+    camera_models
+  end
+
 
   private
   attr_reader :user, :queens_english
+
+  def camera_models
+    list = MetaDataPhoto.where(user_id: user.id)
+    models = extract_camera_models(list)
+    rank_words(models)
+  end
+
+  def extract_camera_models(list)
+    models = []
+    list.each do |photo|
+      models << photo.model
+    end
+    models
+  end
 
   def american_nouns
     list = MetaDataFile.where(user_id: user.id)
