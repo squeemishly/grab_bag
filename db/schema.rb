@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170727215030) do
+ActiveRecord::Schema.define(version: 20170730030047) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -110,6 +110,7 @@ ActiveRecord::Schema.define(version: 20170727215030) do
     t.string   "top_noun",      default: [],              array: true
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
+    t.string   "extension"
     t.index ["binaries_id"], name: "index_meta_data_files_on_binaries_id", using: :btree
     t.index ["user_id"], name: "index_meta_data_files_on_user_id", using: :btree
   end
