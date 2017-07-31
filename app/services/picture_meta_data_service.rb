@@ -7,7 +7,7 @@ class PictureMetaDataService
   end
 
   def collect
-    info = MetaData.create!(width: exifr.width,
+    info = MetaDataPhoto.create!(width: exifr.width,
                   height: exifr.height,
                   model: exifr.model,
                   shutter_speed: exifr.exposure_time,
@@ -19,8 +19,6 @@ class PictureMetaDataService
     end
     binding.pry
   end
-
-
 
   private
     attr_reader :exifr, :user, :binary_id

@@ -13,8 +13,8 @@ class User < ApplicationRecord
   validate :check_username_format
   validates :name, presence: true
   validates :status, presence: true
-  validates :email, presence: true, uniqueness: true
-  validate :check_email_format
+  # validates :email, presence: true, uniqueness: true
+  # validate :check_email_format
   validates :phone, presence: true
   validate :check_phone_format
   validates_uniqueness_of :username, case_sensitive: false
@@ -28,7 +28,8 @@ class User < ApplicationRecord
   has_many :owned_folders, class_name: "Folder", foreign_key: "user_id"
   has_many :comments
   has_many :folders
-  has_many :meta_data
+
+  has_many :meta_data_photos
 
   after_create :make_home
 

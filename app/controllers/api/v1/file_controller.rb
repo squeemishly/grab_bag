@@ -12,4 +12,12 @@ class Api::V1::FileController < ApplicationController
     render json: UploadLogicHelper.new(current_user).american?
   end
 
+  def camera_type
+    render json: UploadLogicHelper.new(current_user).camera_types
+  end
+
+  def document_types
+    render json: UploadLogicHelper.new(current_user).document_types
+  end
+
 end

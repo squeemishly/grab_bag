@@ -17,9 +17,48 @@ class UploadLogicHelper
     american_nouns
   end
 
+  def camera_types
+    camera_models
+  end
+
+  def document_types
+    file_types
+  end
+
 
   private
   attr_reader :user, :queens_english
+
+  def file_types
+    files = MetaDataFile.where(user_id: user.id)
+    photos = MetaDataPhoto.where(user_id: user.id).count
+    types = extract_file_types(files)
+    json_output = rank_words(types)
+    json_output[:img] = photos
+    json_output
+  end
+
+  def extract_file_types(list)
+    types = []
+    list.each do |photo|
+      types << photo.extension
+    end
+    types
+  end
+
+  def camera_models
+    list = MetaDataPhoto.where(user_id: user.id)
+    models = extract_camera_models(list)
+    rank_words(models)
+  end
+
+  def extract_camera_models(list)
+    models = []
+    list.each do |photo|
+      models << photo.model
+    end
+    models
+  end
 
   def american_nouns
     list = MetaDataFile.where(user_id: user.id)
@@ -30,13 +69,21 @@ class UploadLogicHelper
   def find_real_english(list)
     list = list
     counter = 0
-    output = queens_english.map do |word|
+    queens_english.map do |word|
       if list.include?(word)
         counter += 1
       end
     end
+    count_sanitizer(list.count, counter)
+  end
+
+  def count_sanitizer(word_count, counter)
     json_output = {}
-    json_output[:commonwealth] = (list.count/counter)
+    if counter == 0
+      json_output[:commonwealth] = 0
+    else
+      json_output[:commonwealth] = word_count/counter
+    end
     json_output
   end
 

@@ -3,7 +3,7 @@ class DataSlurper
   def initialize(path = nil, extension = nil, binary_id = nil, current_user )
     @path = path
     @extension = extension
-    @pictures = (%w(jpeg tiff))
+    @pictures = (%w(jpeg tiff jpg))
     @files = (%w(docx pdf doc xls xlsx ppt pptx))
     @user = current_user
     @binary_id = binary_id
@@ -32,10 +32,10 @@ class DataSlurper
       
     end
 
-    def file_slurping
-      yomu = Yomu.new(path)
-      FileMetaDataService.new(yomu, user, binary_id).collect
-    end
+  def file_slurping
+    yomu = Yomu.new(path)
+    FileMetaDataService.new(yomu, user, binary_id, extension).collect
+  end
 
     def picture_slurping(path)
       exif_object = EXIFR::JPEG.new(path)

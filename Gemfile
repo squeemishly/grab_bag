@@ -40,6 +40,9 @@ gem 'sprockets-rails', '2.3.3'
 gem 'faker', :git => 'git://github.com/stympy/faker.git', :branch => 'master'
 gem 'exifr'
 gem 'json'
+gem 'redis'
+gem 'sidekiq'
+
 
 group :development, :test do
   gem 'pry-nav'
