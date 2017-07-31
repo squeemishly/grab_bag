@@ -44,8 +44,12 @@ gem 'bcrypt'
 gem 'database_cleaner'
 gem 'will_paginate'
 gem 'faker', :git => 'git://github.com/stympy/faker.git', :branch => 'master'
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+gem 'exifr'
+gem 'json'
+gem 'redis'
+gem 'sidekiq'
+gem 'newrelic_rpm'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
