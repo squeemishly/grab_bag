@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "returns multi use dataset for bar and line graph" do
     scenario "gathers photo data by year" do
-      user = create(:user, fb_id: ENV['my_fb_id'], token: ENV['my_fb_token'])
+      user = create(:user, fb_id: ENV['facebook_uid'], token: ENV['facebook_token'])
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
       Photos.get_data(user)
@@ -11,7 +11,7 @@ RSpec.describe "returns multi use dataset for bar and line graph" do
   end
 
   scenario "gathers comment data by year" do
-      user = create(:user, fb_id: ENV['my_fb_id'], token: ENV['my_fb_token'])
+      user = create(:user, fb_id: ENV['facebook_uid'], token: ENV['facebook_token'])
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
       Photos.get_data(user)
