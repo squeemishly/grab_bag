@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       namespace :facebook do
         get '/photos', to: "fb_photo#index"
+        get '/comments', to: "fb_comment#index"
       end
         get '/user', to: "users#show"
         get '/file/adjectives', to: "file#topwords_adjectives"
