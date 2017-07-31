@@ -10,6 +10,7 @@ Rails.application.routes.draw do
         get '/adjectives', to: "file#topwords_adjectives"
         get '/nouns', to: "file#topwords_nouns"
         get '/american', to: "file#american?"
+      end
       namespace :meta_data do
         namespace :photos do
           get '/locations', to: "locations#index"
