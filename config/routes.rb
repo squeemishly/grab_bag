@@ -3,6 +3,26 @@ Rails.application.routes.draw do
 
   root 'landing#index', as: :landing_page
 
+  namespace :api do
+    namespace :v1 do
+      namespace :facebook do
+        get '/photos', to: "fb_photo#index"
+      end
+        get '/user', to: "users#show"
+        get '/file/adjectives', to: "file#topwords_adjectives"
+        get '/file/nouns', to: "file#topwords_nouns"
+        get '/file/american', to: "file#american?"
+        get '/file/camera_type', to: "file#camera_type"
+        get '/file/document_types', to: "file#document_types"
+      namespace :meta_data do
+        namespace :photos do
+          get '/locations', to: "locations#index"
+          get '/locations_by_year', to: 'locations#show'
+        end
+      end
+    end
+  end
+
   get '/auth/facebook', as: :facebook_login
   get '/auth/facebook/callback', to: "sessions#create", as: :facebook_callback
 
