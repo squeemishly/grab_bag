@@ -1,4 +1,4 @@
-class Api::V1::FileController < ApplicationController
+class Api::V1::File::FileController < ApplicationController
 
   def topwords_adjectives
     render json: UploadLogicHelper.new(current_user).adjectives
@@ -19,5 +19,4 @@ class Api::V1::FileController < ApplicationController
   def document_types
     render json: UploadLogicHelper.new(current_user).document_types
   end
-
 end
