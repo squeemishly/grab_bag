@@ -99,7 +99,7 @@ A visual representation of the schema is here:
  * Related to Binaries and Comments through a polymorphic association
 
 ### Design
-* We used [Bootstrap](http://getbootstrap.com/) to style our website.
+* We used [Materialize](http://materializecss.com/) to style our website.
 
 ### Test Suite
 
