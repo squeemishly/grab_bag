@@ -1,5 +1,5 @@
 class FacebookLogicHelper
-
+attr_reader :json_output
   def initialize(current_user, year)
     @year = year
     @user = current_user
@@ -31,7 +31,7 @@ class FacebookLogicHelper
   end
 
   private
-  attr_reader :user, :year, :json_output
+  attr_reader :user, :year
 
   def limit_year(photos)
     correct_year = photos.map do |photo|
