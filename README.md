@@ -108,3 +108,11 @@ A visual representation of the schema is here:
 ### Dependencies
 
 * This application depends on many ruby gems, all of which are found in the `Gemfile` and can be installed by running `bundle install` from the terminal in the main directory of the project.
+
+### Contributors
+
+* [Natalia Colomé](https://github.com/nmcolome)
+* [Adam Gunther](https://github.com/adamgunther1)
+* [Mason Holland](https://github.com/MasonHolland)
+* [Carl Richmond](https://github.com/ACC25)
+* [Kristen (squee) Mueller](https://github.com/squeemishly)
