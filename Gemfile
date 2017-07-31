@@ -42,6 +42,7 @@ gem 'exifr'
 gem 'json'
 gem 'redis'
 gem 'sidekiq'
+gem 'newrelic_rpm'
 
 
 group :development, :test do
