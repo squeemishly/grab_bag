@@ -5,6 +5,9 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
+      namespace :facebook do
+        get '/photos', to: "fb_photo#index"
+      end
         get '/user', to: "users#show"
         get '/file/adjectives', to: "file#topwords_adjectives"
         get '/file/nouns', to: "file#topwords_nouns"
