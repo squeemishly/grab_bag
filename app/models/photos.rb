@@ -14,14 +14,21 @@ class Photos
             place.long = photo[:place][:location][:longitude] rescue nil
           end
         end
+
         meta_data = MetaDataPhoto.create!(image: photo[:images][0][:source],
                         created_time: photo[:created_time],
                         fb_uname: photo[:from][:name],
                         fb_uid: photo[:from][:id],
                         fb_photo_id: photo[:id],
                         fb_place_id: place.try(:id),
-                        user_id: user.id
+                        user_id: user.id,
                         )
+        if photo[:place] && place.lat != nil
+          meta_data.update_attributes(lat: place.lat)
+        end
+        if photo[:place] && place.long != nil
+          meta_data.update_attributes(long: place.long)
+        end
 
         if photo[:reactions]
           photo[:reactions][:data].each do |reaction|
