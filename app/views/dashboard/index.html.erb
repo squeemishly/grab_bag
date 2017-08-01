@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" id="cloud-storage-stats">
   <br>
   <h3>Cloud Storage Stats</h3>
   <br><br><br><br><br>
@@ -20,13 +20,14 @@
 
   <div class="col s4">
     <div class="document-types">
-      <canvas id="document_types_chart" class="pie-chart" style="width:10px; height: 10px;"></canvas>
+      <canvas id="document_types_chart" class="pie-chart"></canvas>
       <%= javascript_include_tag "charts/document_types_chart.js" %>
     </div>
   </div>
+  
 </div>
 
-<div class="row">
+<div class="row" id="commonwealth-percentage">
 <br><br><br><br><br><br><br><br><br><br>
 <h3>How UnAmerican Are You?</h3>
 <br><br><br>
@@ -38,7 +39,10 @@
   </div>
 </div>
 
-<div class="row">
+<div class="row" id="facebook-stats">
+  <br><br><br>
+  <h3>Facebook Statistics</h3>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   <div class="col s4">
     <div class="facebook-likers">
       <canvas id="likers"></canvas>
@@ -64,11 +68,11 @@
 <%= javascript_include_tag "ammap_3.21.3.free/ammap/ammap.js" %>
 <%= javascript_include_tag "map_locations.js" %>
 
-<div class="row">
+<div class="row" id="photos-by-year">
   <br><br><br><br><br>
   <h3>Photos by Year</h3>
   <div class="col s2"></div>
-  <div class="col s6">
+  <div class="col s7">
     <div id="maps">
       <div id="ammap" class="mapdiv" style="visibility: visible;"></div>
     </div>
@@ -77,10 +81,10 @@
     <div id='slider-step'></div>
     <div id='slider-step-value'></div>
   </div>
-  <div class="col s2"></div>
+  <div class="col s1"></div>
 </div>
 
-<div class="row">
+<div class="row" id="facebook-photos-comments">
   <br><br><br><br><br>
   <h3>Photos and Comments by Year</h3>
   <br><br><br><br><br>
