@@ -1,9 +1,4 @@
-$(document).ready(function() {
-  var year = 2017;
-  showPost(year);
-})
-
-var showPost = function (year) {
+var showPost = function(year) {
   return $.ajax({
     url: '/api/v1/facebook/photos_comments',
     method: 'GET',
@@ -23,12 +18,12 @@ var showPost = function (year) {
               label: "Photos",
               fill: false,
               lineTension: 0.1,
-              backgroundColor: "rgba(225,0,0,0.4)",
-              borderColor: "red", // The main line color
+              backgroundColor: "#80cbc4",
+              borderColor: "#80cbc4", // The main line color
               borderCapStyle: 'square',
-              borderDash: [], // try [5, 15] for instance
+              borderDash: [1, 2], // try [5, 15] for instance
               borderDashOffset: 0.0,
-              borderJoinStyle: 'miter',
+              borderJoinStyle: '#80cbc4',
               pointBorderColor: "black",
               pointBackgroundColor: "white",
               pointBorderWidth: 1,
@@ -45,8 +40,8 @@ var showPost = function (year) {
               label: "Comments",
               fill: true,
               lineTension: 0.1,
-              backgroundColor: "rgba(167,105,0,0.4)",
-              borderColor: "rgb(167, 105, 0)",
+              backgroundColor: "#006064",
+              borderColor: "#00838f",
               borderCapStyle: 'butt',
               borderDash: [],
               borderDashOffset: 0.0,
@@ -77,7 +72,7 @@ var showPost = function (year) {
                         },
                         scaleLabel: {
                              display: true,
-                             labelString: 'FB Photos & Comments',
+                             labelString: '',
                              fontSize: 20
                           }
                     }]
@@ -99,30 +94,4 @@ var showPost = function (year) {
   })
 };
 
-var stepSlider = document.getElementById('slider-step');
-
-noUiSlider.create(stepSlider, {
-  start: [ 2017 ],
-  step: 1,
-  format: wNumb({
-    decimals: 0
-  }),
-  range: {
-    min: 2007,
-    max: 2017
-  }
-});
-
-var range = [
-  '2007', '2008', '2009', '2010',
-  '2011', '2012', '2013', '2014',
-  '2015', '2016', '2017'
-];
-
-var stepSliderValueElement  =
-document.getElementById('slider-step-value');
-
-stepSlider.noUiSlider.on('update', function( values, handle ) {
-  stepSliderValueElement.innerHTML = values[handle];
-  showPost(values[handle]);
-});
+showPost("2014");

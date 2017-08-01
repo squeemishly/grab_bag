@@ -22,7 +22,13 @@ $.ajax({
                 ],
                 data: values
               }]
-            }
+            },
+            options: {
+              title: {
+                display: true,
+                text: 'Camera Type'
+                }
+              }
           });
 
     }
