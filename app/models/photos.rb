@@ -35,7 +35,8 @@ class Photos
             FbReaction.create(fb_uid: reaction[:id],
                               fb_uname: reaction[:name],
                               reaction_type: reaction[:type],
-                              meta_data_photo_id: meta_data.id
+                              meta_data_photo_id: meta_data.id,
+                              user_id: user.id
                               )
           end
         end
@@ -44,7 +45,8 @@ class Photos
           photo[:tags][:data].each do |tag|
             FbTag.create(fb_uid: tag[:id],
                           fb_uname: tag[:name],
-                          meta_data_photo_id: meta_data.id
+                          meta_data_photo_id: meta_data.id,
+                          user_id: user.id
                           )
           end
         end
@@ -56,7 +58,8 @@ class Photos
                               message: comment[:message],
                               fb_uname: comment[:from][:name],
                               fb_uid: comment[:from][:id],
-                              meta_data_photo_id: meta_data.id
+                              meta_data_photo_id: meta_data.id,
+                              user_id: user.id
                               )
           end
         end

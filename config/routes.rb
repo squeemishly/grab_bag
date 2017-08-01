@@ -21,6 +21,9 @@ Rails.application.routes.draw do
           get '/locations_by_year', to: 'locations#show'
         end
       end
+      namespace :facebook do
+        get '/facebook_commenters', to: 'facebook_commenters#index'
+      end
     end
   end
 
