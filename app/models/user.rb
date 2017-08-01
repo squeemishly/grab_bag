@@ -30,6 +30,9 @@ class User < ApplicationRecord
   has_many :folders
 
   has_many :meta_data_photos
+  has_many :fb_comments
+  has_many :fb_tags
+  has_many :fb_reactions
 
   after_create :make_home
 
