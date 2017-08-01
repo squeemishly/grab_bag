@@ -66,4 +66,5 @@ RSpec.describe "facebook api" do
     expect(info["Purple"]).to eq 1
     expect(info["Sheila"]).to eq 1
   end
+
 end
