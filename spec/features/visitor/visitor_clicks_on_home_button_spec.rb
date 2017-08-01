@@ -5,7 +5,7 @@ RSpec.feature "As a visitor", :type => :feature do
     visit landing_page_path
 
     within '.nav-wrapper' do
-      click_on 'Dark Clout'
+      click_on 'Grab Bag'
     end
     expect(current_path).to eq(landing_page_path)
   end

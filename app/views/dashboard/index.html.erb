@@ -24,7 +24,7 @@
       <%= javascript_include_tag "charts/document_types_chart.js" %>
     </div>
   </div>
-  
+
 </div>
 
 <div class="row" id="commonwealth-percentage">
@@ -33,8 +33,7 @@
 <br><br><br>
   <div class="col s12">
     <div class="commonwealth-percentage">
-      <canvas id="commonwealth" class="pie-chart"></canvas>
-      <%= javascript_include_tag "charts/commonwealth.js" %>
+      <%= @commonwealth[:commonwealth] %>%
     </div>
   </div>
 </div>
@@ -49,7 +48,7 @@
       <%= javascript_include_tag "charts/likers.js" %>
     </div>
   </div>
-  
+
   <div class="col s4">
     <div class="facebook-commenters">
       <canvas id="comments"></canvas>
@@ -102,5 +101,3 @@
   <div class="col s2"></div>
 </div>
 <div style="height:150px;"></div>
-
-
