@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require nouislider
  */
 
 @import "materialize/components/color"
@@ -28,3 +29,33 @@
   padding-left: 0.2em
   color:   white
   display: none
+
+#maps
+  width: 800px
+  height: 750px
+  border: 0px solid #eee
+  margin: 0px auto
+  position: relative
+
+.mapdiv
+  width: 800px
+  height: 750px
+  position: absolute
+  top: 0
+  left: 0
+
+#maps
+  margin: 0
+  width: 70%
+  display: block
+  float: right
+
+#slider-step
+  width: 200px
+  margin: 50px
+  margin-top: 300px
+  display: block
+  float:left
+
+#slider-step-value
+  margin: 50px

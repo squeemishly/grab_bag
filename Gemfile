@@ -42,6 +42,8 @@ gem 'exifr'
 gem 'json'
 gem 'redis'
 gem 'sidekiq'
+gem 'nouislider-rails'
+gem 'rack-cors', :require => 'rack/cors'
 gem 'gon'
 
 

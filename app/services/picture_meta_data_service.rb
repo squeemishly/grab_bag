@@ -12,7 +12,9 @@ class PictureMetaDataService
                   model: exifr.model,
                   shutter_speed: exifr.exposure_time,
                   aperture: exifr.f_number,
+                  created_time: exifr.date_time.to_s,
                   user_id: @user.id)
+                  binding.pry
     if gps_data? == true
       info.update_attributes(long: exifr.gps.longitude,
                               lat: exifr.gps.latitude)
