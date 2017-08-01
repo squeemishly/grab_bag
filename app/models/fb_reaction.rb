@@ -5,6 +5,7 @@ class FbReaction < ApplicationRecord
   def self.most_likers(user)
     self.group(:fb_uname)
         .where(user_id: user.id)
+        .where.not(fb_uid: user.fb_id)
         .limit(5)
         .order('count_id desc')
         .count('id')
