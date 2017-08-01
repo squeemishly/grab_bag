@@ -9,7 +9,7 @@ Chart.defaults.global.defaultFontSize = 16;
 var data = {
   labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
   datasets: [{
-      label: "Stock A",
+      label: "Photos",
       fill: false,
       lineTension: 0.1,
       backgroundColor: "rgba(225,0,0,0.4)",
@@ -28,10 +28,10 @@ var data = {
       pointRadius: 4,
       pointHitRadius: 10,
       // notice the gap in the data and the spanGaps: true
-      data: console.log(gon.photo_values),
+      data: gon.photo_values,
       spanGaps: true,
     }, {
-      label: "Stock B",
+      label: "Comments",
       fill: true,
       lineTension: 0.1,
       backgroundColor: "rgba(167,105,0,0.4)",
@@ -50,7 +50,7 @@ var data = {
       pointRadius: 4,
       pointHitRadius: 10,
       // notice the gap in the data and the spanGaps: false
-      data: console.log(gon.comment_values),
+      data: gon.comment_values,
       spanGaps: false,
     }
 
@@ -66,7 +66,7 @@ var options = {
                 },
                 scaleLabel: {
                      display: true,
-                     labelString: 'Moola',
+                     labelString: 'FB Photos & Comments',
                      fontSize: 20
                   }
             }]
