@@ -20,6 +20,11 @@ Rails.application.routes.draw do
           get '/filtered_by_year', to: 'filtered_by_year#index'
         end
       end
+      namespace :facebook do
+        get '/facebook_commenters', to: 'facebook_commenters#index'
+        get '/facebook_taggers', to: 'facebook_taggers#index'
+        get '/facebook_reactions', to: 'facebook_reactions#index'
+      end
     end
   end
 
