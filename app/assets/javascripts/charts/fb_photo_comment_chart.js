@@ -1,4 +1,9 @@
-var showPost = function(year) {
+$(document).ready(function() {
+  var year = 2017;
+  showPost(year);
+})
+
+var showPost = function (year) {
   return $.ajax({
     url: '/api/v1/facebook/photos_comments',
     method: 'GET',
@@ -100,4 +105,30 @@ var showPost = function(year) {
   })
 };
 
-showPost("2014");
+var stepSlider = document.getElementById('slider-step');
+
+noUiSlider.create(stepSlider, {
+  start: [ 2017 ],
+  step: 1,
+  format: wNumb({
+    decimals: 0
+  }),
+  range: {
+    min: 2007,
+    max: 2017
+  }
+});
+
+var range = [
+  '2007', '2008', '2009', '2010',
+  '2011', '2012', '2013', '2014',
+  '2015', '2016', '2017'
+];
+
+var stepSliderValueElement  =
+document.getElementById('slider-step-value');
+
+stepSlider.noUiSlider.on('update', function( values, handle ) {
+  stepSliderValueElement.innerHTML = values[handle];
+  showPost(values[handle]);
+});
