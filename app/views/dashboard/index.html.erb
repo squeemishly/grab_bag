@@ -27,15 +27,18 @@
 
 </div>
 
-<div class="row" id="commonwealth-percentage">
-<br><br><br><br><br><br><br><br><br><br>
-<h3>How UnAmerican Are You?</h3>
+<div class="row">
+  <br><br><br><br><br><br><br><br><br><br>
+<h3>Queen's English</h3>
 <br><br><br>
-  <div class="col s12">
+<div class="col s4"></div>
+  <div class="col s4">
     <div class="commonwealth-percentage">
-      <%= @commonwealth[:commonwealth] %>%
+      <canvas id="commonwealth"></canvas>
+      <%= javascript_include_tag "charts/commonwealth.js" %>
     </div>
   </div>
+  <div class="col s4"></div>
 </div>
 
 <div class="row" id="facebook-stats">
