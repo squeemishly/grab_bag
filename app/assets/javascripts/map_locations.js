@@ -1,44 +1,50 @@
-$.ajax({
-     url : ("/api/v1/meta_data/photos/filtered_by_year"),
-     type : 'GET',
-     success : function(data) {
-        var locations = data;
-          var ammap = AmCharts.makeChart( "ammap", {
-            "type": "map",
-            "theme": "light",
-            "zoomDuration": 0,
-            "dataProvider": {
-              "map": "worldLow",
-                  "images": locations,
-              "getAreasFromMap": true
-            },
-            "areasSettings": {
-              "autoZoom": false
-            },
-            "zoomControl": {
-              "zoomFactor": 2,
-              "maxZoomLevel": 1048576,
-              "panControlEnabled": true,
-              "top": 50
-            }
-          } );
-    }
-});
+$(document).ready(function() {  
+  var year = 2017;
+  getPhotos(year);
+})
 
+var getPhotos = function (year) {
+  return $.ajax({
+      url : ("/api/v1/meta_data/photos/filtered_by_year"),
+      type : 'GET',
+      data : { year: year },
+      success : function(data) {
+          var locations = data;
+            var ammap = AmCharts.makeChart( "ammap", {
+              "type": "map",
+              "theme": "light",
+              "zoomDuration": 0,
+              "dataProvider": {
+                "map": "worldLow",
+                    "images": locations,
+                "getAreasFromMap": true
+              },
+              "areasSettings": {
+                "autoZoom": false
+              },
+              "zoomControl": {
+                "zoomFactor": 2,
+                "maxZoomLevel": 1048576,
+                "panControlEnabled": true,
+                "top": 50
+              }
+            } );
+      }
+  })
+}
 
-var bigValueSlider = document.getElementById('slider-huge'),
-  bigValueSpan = document.getElementById('huge-value');
+var stepSlider = document.getElementById('slider-step');
 
-noUiSlider.create(bigValueSlider, {
-  start: 0,
+noUiSlider.create(stepSlider, {
+	start: [ 2017 ],
   step: 1,
   format: wNumb({
-    decimals: 0
-  }),
-  range: {
-    min: 0,
-    max: 10
-  }
+		decimals: 0
+	}),
+	range: {
+    min: 2007,
+    max: 2017
+	}
 });
 
 var range = [
@@ -47,6 +53,9 @@ var range = [
   '2015','2016','2017'
 ];
 
-bigValueSlider.noUiSlider.on('update', function ( values, handle ) {
-  bigValueSpan.innerHTML = range[values[handle]];
+var stepSliderValueElement = document.getElementById('slider-step-value');
+
+stepSlider.noUiSlider.on('update', function( values, handle ) {
+  stepSliderValueElement.innerHTML = values[handle];
+  getPhotos(values[handle]);
 });
