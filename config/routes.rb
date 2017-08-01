@@ -5,22 +5,29 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      namespace :facebook do
-        get '/photos', to: "fb_photo#index"
-        get '/comments', to: "fb_comment#index"
-        get '/photos_comments', to: "fb_photo_comment#index"
-      end
         get '/user', to: "users#show"
-        get '/file/adjectives', to: "file#topwords_adjectives"
-        get '/file/nouns', to: "file#topwords_nouns"
-        get '/file/american', to: "file#american?"
-        get '/file/camera_type', to: "file#camera_type"
-        get '/file/document_types', to: "file#document_types"
+      get '/user', to: "users#show"
+      namespace :file do
+        get '/adjectives', to: "file#topwords_adjectives"
+        get '/nouns', to: "file#topwords_nouns"
+        get '/american', to: "file#american?"
+        get '/camera_type', to: "file#camera_type"
+        get '/document_types', to: "file#document_types"
+      end
       namespace :meta_data do
         namespace :photos do
           get '/locations', to: "locations#index"
           get '/locations_by_year', to: 'locations#show'
+          get '/filtered_by_year', to: 'filtered_by_year#index'
         end
+      end
+      namespace :facebook do
+        get '/facebook_commenters', to: 'facebook_commenters#index'
+        get '/facebook_taggers', to: 'facebook_taggers#index'
+        get '/facebook_reactions', to: 'facebook_reactions#index'
+        get '/photos', to: "fb_photo#index"
+        get '/comments', to: "fb_comment#index"
+        get '/photos_comments', to: "fb_photo_comment#index"
       end
     end
   end

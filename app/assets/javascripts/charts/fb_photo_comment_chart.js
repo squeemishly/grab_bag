@@ -86,6 +86,6 @@ var showPost = function(year) {
     method: 'GET',
     data: { year: year }
   }).done(function(post){
-    
+
   })
 };
