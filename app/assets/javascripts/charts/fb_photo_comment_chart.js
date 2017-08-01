@@ -79,3 +79,13 @@ var myBarChart = new Chart(ctx, {
   data: data,
   options: options
 });
+
+var showPost = function(year) {
+  return $.ajax({
+    url: API + '/api/v1/facebook/photos_comments',
+    method: 'GET',
+    data: { year: year }
+  }).done(function(post){
+
+  })
+};
