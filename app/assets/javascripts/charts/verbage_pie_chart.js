@@ -7,7 +7,7 @@ $.ajax({
         var values = Object.values(json_data);
           var ctx = document.getElementById('verbage_chart').getContext('2d');
           var myChart = new Chart(ctx, {
-            type: 'pie',
+            type: 'doughnut',
             data: {
               labels: keys,
               datasets: [{
