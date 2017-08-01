@@ -23,6 +23,6 @@ class MetaDataPhoto < ApplicationRecord
   end
 
   def self.filtered_by_year(user, year)
-    where(user_id: user.id).where("extract(year from created_at)  = ?", year).order(:id)
+    where(user_id: user.id).where("created_time LIKE (?)", "#{year}%").order(:id)
   end
 end

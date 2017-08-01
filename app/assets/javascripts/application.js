@@ -22,6 +22,7 @@
 //= require charts/verbage_pie_chart
 //= require charts/camera_type_chart
 //= require charts/document_types_chart
+//= require nouislider
 //= require_tree .
 
 $(function() {
