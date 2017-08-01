@@ -1,12 +1,13 @@
 $.ajax({
-     url : ("/api/v1/file/adjectives"),
+     url : ("/api/v1/facebook/facebook_commenters"),
      type : 'GET',
      success : function(data) {
         var json_data = data;
-        // var keys = Object.keys(json_data);
-        // var values = Object.values(json_data);
-        var keys = ['Jerry', 'Kelly', 'Annie', 'Bobbie', 'Joan'];
-        var values = [22, 14, 13, 9, 6];
+        debugger;
+        var keys = Object.keys(json_data);
+        var values = Object.values(json_data);
+        // var keys = ['Jerry', 'Kelly', 'Annie', 'Bobbie', 'Joan'];
+        // var values = [22, 14, 13, 9, 6];
           var ctx = document.getElementById('comments').getContext('2d');
           var myChart = new Chart(ctx, {
             type: 'bar',
