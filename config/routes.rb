@@ -20,6 +20,7 @@ Rails.application.routes.draw do
       namespace :facebook do
         get '/facebook_commenters', to: 'facebook_commenters#index'
         get '/facebook_taggers', to: 'facebook_taggers#index'
+        get '/facebook_reactions', to: 'facebook_reactions#index'
       end
     end
   end
