@@ -17,6 +17,16 @@ attr_reader :json_output
                     "12" => 0}
   end
 
+  def joined_photo_comment
+    photos = monthly_breakdown_photos
+    reset_json_output
+    comments = monthly_breakdown_comments
+    output = {
+      photos: photos,
+      commments: comments
+    }
+  end
+
   def monthly_breakdown_photos
     photos = MetaDataPhoto.where(user_id: user.id)
     list_by_year = limit_year(photos)
@@ -33,6 +43,21 @@ attr_reader :json_output
 
   private
   attr_reader :user, :year
+
+  def reset_json_output
+    @json_output = { "01" => 0,
+                    "02" => 0,
+                    "03" => 0,
+                    "04" => 0,
+                    "05" => 0,
+                    "06" => 0,
+                    "07" => 0,
+                    "08" => 0,
+                    "09" => 0,
+                    "10" => 0,
+                    "11" => 0,
+                  "12" => 0}
+  end
 
   def limit_year(photos)
     correct_year = photos.map do |photo|
