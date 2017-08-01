@@ -1,4 +1,4 @@
-class Api::V1::FileController < ActionController::API
+class Api::V1::FileController < ApplicationController
 
   def topwords_adjectives
     render json: UploadLogicHelper.new(current_user).adjectives

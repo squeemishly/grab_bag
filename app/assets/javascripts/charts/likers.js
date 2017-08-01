@@ -1,43 +1,43 @@
-$.ajax({
-     url : ("/api/v1/file/adjectives"),
-     type : 'GET',
-     success : function(data) {
-        var json_data = data;
-        // var keys = Object.keys(json_data);
-        // var values = Object.values(json_data);
-        var keys = ['Jerry', 'Kelly', 'Annie', 'Bobbie', 'Joan'];
-        var values = [15, 12, 10, 9, 7];
-          var ctx = document.getElementById('likers').getContext('2d');
-          var myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-              labels: keys,
-              datasets: [{
-                data: values,
-                label: "# of Likes",
-                backgroundColor: "#2ecc71"
-                  }]
-            },
-            options: {
-              title: {
-                display: true,
-                position: 'top',
-                fontColor: '#2ecc71',
-                text: 'Top 5 People Who Like Your Facebook Photos'
-              },
-              scales: {
-                  yAxes: [{
-                      ticks: {
-                          beginAtZero:true
-                      }
-                  }]
-              }
-            }
-          });
-
-    }
-});
-
+// $.ajax({
+//      url : ("/api/v1/file/adjectives"),
+//      type : 'GET',
+//      success : function(data) {
+//         var json_data = data;
+//         // var keys = Object.keys(json_data);
+//         // var values = Object.values(json_data);
+//         var keys = ['Jerry', 'Kelly', 'Annie', 'Bobbie', 'Joan'];
+//         var values = [15, 12, 10, 9, 7];
+//           var ctx = document.getElementById('likers').getContext('2d');
+//           var myChart = new Chart(ctx, {
+//             type: 'bar',
+//             data: {
+//               labels: keys,
+//               datasets: [{
+//                 data: values,
+//                 label: "# of Likes",
+//                 backgroundColor: "#2ecc71"
+//                   }]
+//             },
+//             options: {
+//               title: {
+//                 display: true,
+//                 position: 'top',
+//                 fontColor: '#2ecc71',
+//                 text: 'Top 5 People Who Like Your Facebook Photos'
+//               },
+//               scales: {
+//                   yAxes: [{
+//                       ticks: {
+//                           beginAtZero:true
+//                       }
+//                   }]
+//               }
+//             }
+//           });
+//
+//     }
+// });
+//
 
 
 // <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
