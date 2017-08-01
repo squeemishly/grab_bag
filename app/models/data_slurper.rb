@@ -10,9 +10,9 @@ class DataSlurper
   end
 
   def direct_slurping
-    if pictures.include?(extension)
+    if pictures.include?(extension.downcase)
       picture_slurping
-    elsif files.include?(extension)
+    elsif files.include?(extension.downcase)
       file_slurping
     end
   end
