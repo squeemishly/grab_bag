@@ -1,9 +1,4 @@
-$(document).ready(function() {
-  var year = 2017;
-  showPost(year);
-})
-
-var showPost = function (year) {
+var showPost = function(year) {
   return $.ajax({
     url: '/api/v1/facebook/photos_comments',
     method: 'GET',
@@ -23,12 +18,12 @@ var showPost = function (year) {
               label: "Photos",
               fill: false,
               lineTension: 0.1,
-              backgroundColor: "rgba(225,0,0,0.4)",
-              borderColor: "red", // The main line color
+              backgroundColor: "#80cbc4",
+              borderColor: "#80cbc4", // The main line color
               borderCapStyle: 'square',
-              borderDash: [], // try [5, 15] for instance
+              borderDash: [1, 2], // try [5, 15] for instance
               borderDashOffset: 0.0,
-              borderJoinStyle: 'miter',
+              borderJoinStyle: '#80cbc4',
               pointBorderColor: "black",
               pointBackgroundColor: "white",
               pointBorderWidth: 1,
@@ -45,8 +40,8 @@ var showPost = function (year) {
               label: "Comments",
               fill: true,
               lineTension: 0.1,
-              backgroundColor: "rgba(167,105,0,0.4)",
-              borderColor: "rgb(167, 105, 0)",
+              backgroundColor: "#006064",
+              borderColor: "#00838f",
               borderCapStyle: 'butt',
               borderDash: [],
               borderDashOffset: 0.0,
@@ -77,7 +72,7 @@ var showPost = function (year) {
                         },
                         scaleLabel: {
                              display: true,
-                             labelString: 'FB Photos & Comments',
+                             labelString: '',
                              fontSize: 20
                           }
                     }]
