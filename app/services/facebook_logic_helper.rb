@@ -13,7 +13,8 @@ attr_reader :json_output
                     "08" => 0,
                     "09" => 0,
                     "10" => 0,
-                    "11" => 0}
+                    "11" => 0,
+                    "12" => 0}
   end
 
   def monthly_breakdown_photos
