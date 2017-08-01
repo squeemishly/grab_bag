@@ -48,7 +48,7 @@ RSpec.describe "returns multi use dataset for bar and line graph" do
       get '/api/v1/facebook/photos_comments?year=2016'
 
       result = JSON.parse(response.body)
-      binding.pry
+
       expect(result).to be_a Hash
 
   end
