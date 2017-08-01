@@ -42,6 +42,7 @@ gem 'exifr'
 gem 'json'
 gem 'redis'
 gem 'sidekiq'
+gem 'gon'
 
 
 group :development, :test do

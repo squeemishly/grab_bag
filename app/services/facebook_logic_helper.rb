@@ -13,7 +13,8 @@ attr_reader :json_output
                     "08" => 0,
                     "09" => 0,
                     "10" => 0,
-                    "11" => 0}
+                    "11" => 0,
+                  "12" => 0}
   end
 
   def monthly_breakdown_photos
@@ -36,6 +37,7 @@ attr_reader :json_output
   def limit_year(photos)
     correct_year = photos.map do |photo|
       if photo.created_time == nil
+        photo.update_attributes(created_time: photo.created_at.to_s)
         photo.created_at.year.to_s == year ? photo : nil
       elsif photo.created_time.split('-')[0] == year
         photo
