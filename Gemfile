@@ -48,7 +48,8 @@ gem 'exifr'
 gem 'json'
 gem 'redis'
 gem 'sidekiq'
-gem 'newrelic_rpm'
+gem 'nouislider-rails'
+gem 'rack-cors', :require => 'rack/cors'
 
 
 group :development, :test do
