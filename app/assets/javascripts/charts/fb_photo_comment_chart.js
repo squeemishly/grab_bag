@@ -119,16 +119,10 @@ noUiSlider.create(stepSlider, {
   }
 });
 
-var range = [
-  '2007', '2008', '2009', '2010',
-  '2011', '2012', '2013', '2014',
-  '2015', '2016', '2017'
-];
-
-var stepSliderValueElement  =
-document.getElementById('slider-step-value');
+var stepSliderValueElementTwo  =
+document.getElementById('slider-step-value-2');
 
 stepSlider.noUiSlider.on('update', function( values, handle ) {
-  stepSliderValueElement.innerHTML = values[handle];
+  stepSliderValueElementTwo.innerHTML = values[handle];
   showPost(values[handle]);
 });
