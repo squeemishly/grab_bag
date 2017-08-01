@@ -1,43 +1,84 @@
-<div class="verbage_chart">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  </canvas><canvas id="verbage_chart"></canvas>
-  <%= javascript_include_tag "charts/verbage_pie_chart.js" %>
+<div class="row">
+  <div class="col s4">
+    <div class="verbage_chart">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+      </canvas><canvas id="verbage_chart"></canvas>
+      <%= javascript_include_tag "charts/verbage_pie_chart.js" %>
+    </div>
+  </div>
+
+  <div class="col s4">
+    <div class="camera-models">
+      <canvas id="camera_type_chart" class="pie-chart"></canvas>
+      <%= javascript_include_tag "charts/camera_type_chart.js" %>
+    </div>
+  </div>
+
+  <div class="col s4">
+    <div class="document-types">
+      <canvas id="document_types_chart" class="pie-chart" style="width:10px; height: 10px;"></canvas>
+      <%= javascript_include_tag "charts/document_types_chart.js" %>
+    </div>
+  </div>
 </div>
 
-<div class="camera-models">
-  </canvas><canvas id="camera_type_chart"></canvas>
-  <%= javascript_include_tag "charts/camera_type_chart.js" %>
+<div class="row">
+  <div class="col s12">
+    <div class="commonwealth-percentage">
+      <canvas id="commonwealth" class="pie-chart"></canvas>
+      <%= javascript_include_tag "charts/commonwealth.js" %>
+    </div>
+  </div>
 </div>
 
-<div class="document-types">
-  </canvas><canvas id="document_types_chart"></canvas>
-  <%= javascript_include_tag "charts/document_types_chart.js" %>
+<div class="row">
+  <div class="col s4">
+    <div class="facebook-likers">
+      <canvas id="likers"></canvas>
+      <%= javascript_include_tag "charts/likers.js" %>
+    </div>
+  </div>
+
+  <div class="col s4">
+    <div class="facebook-commenters">
+      <canvas id="comments"></canvas>
+      <%= javascript_include_tag "charts/comments.js" %>
+    </div>
+  </div>
+
+  <div class="col s4">
+    <div class="facebook-taggers">
+      <canvas id="taggers"></canvas>
+      <%= javascript_include_tag "charts/taggers.js" %>
+    </div>
+  </div>
 </div>
 
-<div class="commonwealth-percentage">
-  </canvas><canvas id="commonwealth"></canvas>
-  <%= javascript_include_tag "charts/commonwealth.js" %>
+<%= javascript_include_tag "ammap_3.21.3.free/ammap/ammap.js" %>
+<%= javascript_include_tag "map_locations.js" %>
+
+<div class="row">
+  <div class="col s2"></div>
+  <div class="col s6">
+    <div id="maps">
+      <div id="ammap" class="mapdiv" style="visibility: visible;"></div>
+    </div>
+  </div>
+  <div class="col s2">
+    <div id='slider-step'></div>
+    <div id='slider-step-value'></div>
+  </div>
+  <div class="col s2"></div>
 </div>
 
-<div class="facebook-likers">
-  <canvas id="likers"></canvas>
-  <%= javascript_include_tag "charts/likers.js" %>
+<div class="row">
+  <div class="col s2"></div>
+  <div class="col s8">
+    <div class="facebook-photos-comments">
+      <canvas id="photos-comments"></canvas>
+      <%= javascript_include_tag "charts/fb_photo_comment_chart.js" %>
+    </div>
+  </div>
+  <div class="col s2"></div>
 </div>
-
-<div class="facebook-commenters">
-  <canvas id="comments"></canvas>
-  <%= javascript_include_tag "charts/comments.js" %>
-</div>
-
-<div class="facebook-taggers">
-  <canvas id="taggers"></canvas>
-  <%= javascript_include_tag "charts/taggers.js" %>
-</div>
-
-<div class="facebook-photos-comments">
-  <canvas id="photos-comments"></canvas>
-  <%= javascript_include_tag "charts/fb_photo_comment_chart.js" %>
-</div>
-<div id='slider-step'></div>
-<div id='slider-step-value'></div>
