@@ -6,15 +6,6 @@ var ctx = canvas.getContext('2d');
 Chart.defaults.global.defaultFontColor = 'black';
 Chart.defaults.global.defaultFontSize = 16;
 
-var photo_values = function() {
-  return $.ajax({
-    url: '/api/v1/facebook/photos',
-    method: 'GET',
-  }).done(function(post){
-    Object.values(post);
-  })
-};
-
 var data = {
   labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
   datasets: [{
@@ -37,7 +28,7 @@ var data = {
       pointRadius: 4,
       pointHitRadius: 10,
       // notice the gap in the data and the spanGaps: true
-      data: photo_values(),
+      data: console.log(gon.photo_values),
       spanGaps: true,
     }, {
       label: "Stock B",
@@ -59,7 +50,7 @@ var data = {
       pointRadius: 4,
       pointHitRadius: 10,
       // notice the gap in the data and the spanGaps: false
-      data: [10, 20, 60, 95, 64, 78, 90,35,70,40,70,89],
+      data: console.log(gon.comment_values),
       spanGaps: false,
     }
 
