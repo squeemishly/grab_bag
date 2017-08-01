@@ -1,12 +1,12 @@
 $.ajax({
-     url : ("/api/v1/file/adjectives"),
+     url : ("/api/v1/facebook/facebook_taggers"),
      type : 'GET',
      success : function(data) {
         var json_data = data;
-        // var keys = Object.keys(json_data);
-        // var values = Object.values(json_data);
-        var keys = ['Jerry', 'Kelly', 'Annie', 'Bobbie', 'Joan'];
-        var values = [7, 7, 6, 5, 4];
+        var keys = Object.keys(json_data);
+        var values = Object.values(json_data);
+        // var keys = ['Jerry', 'Kelly', 'Annie', 'Bobbie', 'Joan'];
+        // var values = [7, 7, 6, 5, 4];
           var ctx = document.getElementById('taggers').getContext('2d');
           var myChart = new Chart(ctx, {
             type: 'bar',

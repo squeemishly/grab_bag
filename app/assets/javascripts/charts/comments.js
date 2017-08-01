@@ -3,7 +3,6 @@ $.ajax({
      type : 'GET',
      success : function(data) {
         var json_data = data;
-        debugger;
         var keys = Object.keys(json_data);
         var values = Object.values(json_data);
         // var keys = ['Jerry', 'Kelly', 'Annie', 'Bobbie', 'Joan'];
