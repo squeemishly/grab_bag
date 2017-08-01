@@ -44,6 +44,7 @@ gem 'redis'
 gem 'sidekiq'
 gem 'nouislider-rails'
 gem 'rack-cors', :require => 'rack/cors'
+gem 'gon'
 
 
 group :development, :test do
