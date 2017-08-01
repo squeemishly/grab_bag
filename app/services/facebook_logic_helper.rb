@@ -1,5 +1,5 @@
 class FacebookLogicHelper
-
+attr_reader :json_output
   def initialize(current_user, year)
     @year = year
     @user = current_user
@@ -13,7 +13,18 @@ class FacebookLogicHelper
                     "08" => 0,
                     "09" => 0,
                     "10" => 0,
-                    "11" => 0}
+                    "11" => 0,
+                  "12" => 0}
+  end
+
+  def joined_photo_comment
+    photos = monthly_breakdown_photos
+    reset_json_output
+    comments = monthly_breakdown_comments
+    output = {
+      photos: photos,
+      commments: comments
+    }
   end
 
   def monthly_breakdown_photos
@@ -31,11 +42,29 @@ class FacebookLogicHelper
   end
 
   private
-  attr_reader :user, :year, :json_output
+  attr_reader :user, :year
+
+  def reset_json_output
+    @json_output = { "01" => 0,
+                    "02" => 0,
+                    "03" => 0,
+                    "04" => 0,
+                    "05" => 0,
+                    "06" => 0,
+                    "07" => 0,
+                    "08" => 0,
+                    "09" => 0,
+                    "10" => 0,
+                    "11" => 0,
+                  "12" => 0}
+  end
 
   def limit_year(photos)
     correct_year = photos.map do |photo|
-      if photo.created_time.split('-')[0] == year
+      if photo.created_time == nil
+        photo.update_attributes(created_time: photo.created_at.to_s)
+        photo.created_at.year.to_s == year ? photo : nil
+      elsif photo.created_time.split('-')[0] == year
         photo
       end
     end

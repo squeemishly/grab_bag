@@ -24,6 +24,9 @@ Rails.application.routes.draw do
         get '/facebook_commenters', to: 'facebook_commenters#index'
         get '/facebook_taggers', to: 'facebook_taggers#index'
         get '/facebook_reactions', to: 'facebook_reactions#index'
+        get '/photos', to: "fb_photo#index"
+        get '/comments', to: "fb_comment#index"
+        get '/photos_comments', to: "fb_photo_comment#index"
       end
     end
   end
