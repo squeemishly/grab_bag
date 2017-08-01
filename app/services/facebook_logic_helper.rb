@@ -36,7 +36,9 @@ attr_reader :json_output
 
   def limit_year(photos)
     correct_year = photos.map do |photo|
-      if photo.created_time.split('-')[0] == year
+      if photo.created_time == nil
+        photo.created_at.year.to_s == year ? photo : nil
+      elsif photo.created_time.split('-')[0] == year
         photo
       end
     end
