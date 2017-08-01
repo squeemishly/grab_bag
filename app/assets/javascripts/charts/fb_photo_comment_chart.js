@@ -94,4 +94,24 @@ var showPost = function(year) {
   })
 };
 
-showPost("2014");
+var stepSlider = document.getElementById('slider-step-2');
+
+noUiSlider.create(stepSlider, {
+  start: [ 2017 ],
+  step: 1,
+  format: wNumb({
+    decimals: 0
+  }),
+  range: {
+    min: 2007,
+    max: 2017
+  }
+});
+
+var stepSliderValueElementTwo  =
+document.getElementById('slider-step-value-2');
+
+stepSlider.noUiSlider.on('update', function( values, handle ) {
+  stepSliderValueElementTwo.innerHTML = values[handle];
+  showPost(values[handle]);
+});
