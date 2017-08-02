@@ -5,7 +5,7 @@
 
 ## Overview
 
-The goal of Dark Clout is to show users exactly what type of information they are giving up when they choose to use an upload service and login with Facebook. Building upon the original functionality, the app exposes how much information Facebook gives developers with the seemingly harmless public information permission. Using easy to understand charts, Dark Clout exposes your virtual profile.
+The goal of Dark Clout is to show users exactly what type of information they are giving up when they choose to use an upload service and login with Facebook. Building upon the original functionality of Grab Bag, the new dashboard highlights how much information Facebook gives developers with the seemingly harmless public information permission. Using background workers and easy to understand charts, Dark Clout gathers and exposes your virtual profile.
 
 This brownfield project, named Grab Bag, was designed to mimic the functionality of Dropbox by giving users the ability to upload images and files using the S3 Bucket.  
 
