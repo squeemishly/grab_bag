@@ -26,7 +26,7 @@ $.ajax({
             options: {
               title: {
                 display: true,
-                text: 'Verbage'
+                text: 'Verbiage'
                 }
               }
           });
