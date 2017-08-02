@@ -10,7 +10,7 @@ The goal of Dark Clout is to show users exactly what type of information they ar
 This brownfield project, originally named Grab Bag, was designed to mimic the functionality of Dropbox by giving users the ability to upload images and files using the S3 Bucket.  
 
 ### Stack
-This site is built with Javascript, SASS, CSS, Materialize, AJAX, ChartsJS, AM Charts, Postgresql, Rails 5.1.2, Ruby version 2.4.1, Redis, Sidekiq, Facebook API.
+This site was built with Javascript, JQeury, SASS, Materialize, ChartsJS, AM Charts, Postgresql, Rails 5.1.2, Ruby 2.4.1, Redis, Sidekiq and the Facebook API.
 
 ### Setup
 
@@ -77,10 +77,10 @@ A visual representation of the schema is here:
 
 #### Dark Clout
  * A user can view a breakdown of:
-    * the most popular nouns found in the users uploaded documents.
-    * all files uploaded and see different percentages of file types.
-    * the different camera used for all uploaded images.
-    * the amount of British spelling used in your documents.
+    * the most popular adjectives found in the users uploaded documents.
+    * all files uploaded and the filetype breakdown.
+    * the camera model breakdown.
+    * the percentage of nouns that you use, that comform to British vs American spelling.
     * your top 5 'Likers' on Facebook
     * your top 5 'Commenters' on Facebook
     * your top 5 'Taggers' on Facebook
@@ -112,10 +112,6 @@ A visual representation of the schema is here:
 ### Test Suite
 
 * The test suite tests the application on multiple levels. To run all of the tests, run `rspec` from the terminal in the main directory of the project. The feature tests (integration tests) rely mainly on the [capybara gem](https://github.com/jnicklas/capybara) for navigating the various application views.
-
-### Dependencies
-
-* This application depends on many ruby gems, all of which are found in the `Gemfile` and can be installed by running `bundle install` from the terminal in the main directory of the project.
 
 ### Contributors
 
