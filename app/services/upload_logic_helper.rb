@@ -80,9 +80,9 @@ class UploadLogicHelper
   def count_sanitizer(word_count, counter)
     json_output = {}
     if counter == 0
-      json_output[:commonwealth] = 0
+      json_output[:nouns] = 0
     else
-      json_output[:commonwealth] = word_count/counter
+      json_output[:nouns] = word_count/counter
     end
     json_output
   end
