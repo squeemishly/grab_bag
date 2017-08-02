@@ -14,6 +14,7 @@ class PictureMetaDataService
                   aperture: exifr.f_number,
                   created_time: exifr.date_time.to_s,
                   user_id: @user.id)
+                  binding.pry
     if gps_data? == true
       info.update_attributes(long: exifr.gps.longitude,
                               lat: exifr.gps.latitude)

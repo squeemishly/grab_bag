@@ -1,17 +1,17 @@
-<img class="logo left" src="<%= asset_path( 'dark-clout.png' ) %>">
-<a class="brand-logo left" href='<%= landing_page_path %>'>Grab Bag</a>
+  <img class="logo left" src="<%= asset_path( 'dark-clout.png' ) %>">
+  <a class="brand-logo left" href='<%= landing_page_path %>'>Grab Bag</a>
 <ul id="nav-mobile" class="right hide-on-med-and-down">
-<% if current_user %>
-<li> <%= link_to "Dark Clout", dashboard_index_path %> </li>
-<li><%= link_to "My Profile", users_dashboard_path(current_user.username) %>My Profile</li>
-<li><%= link_to "Logout", signout_path %> </li>
-<% else %>
-<li><a class="" href="<%= facebook_login_path %>"> Login With Facebook</a></li>
-<% end %>
-<li><%= link_to "Public Folders", public_folders_path %></li>
-<li><%= link_to "Folders Shared with Me", users_shared_folders_path(current_user.username) if current_user %></li>
-<% if current_admin? %>
-  <li> <%= link_to admin_users_path(current_user) %> Users Index</li>
-<% end %>
+  <% if current_user %>
+  <li> <%= link_to "Dark Clout", dashboard_index_path %> </li>
+  <li><%= link_to "My Profile", users_dashboard_path(current_user.username) %>My Profile</li>
+  <li><%= link_to "Logout", signout_path %> </li>
+  <% else %>
+  <li><a class="" href="<%= facebook_login_path %>"> Login With Facebook</a></li>
+  <% end %>
+  <li><%= link_to "Public Folders", public_folders_path %></li>
+  <li><%= link_to "Folders Shared with Me", users_shared_folders_path(current_user.username) if current_user %></li>
+  <% if current_admin? %>
+    <li> <%= link_to admin_users_path(current_user) %> Users Index</li>
+  <% end %>
 
 </ul>
