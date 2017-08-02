@@ -1,7 +1,7 @@
 # GRAB BAG - Dark Clout Edition
 ## How much information are you giving up?
 
-![Image of Yaktocat](https://github.com/squeemishly/dark_clout/blob/readme_update/app/assets/images/dark-clout.png?raw=true)
+![Dark Clout logo](https://github.com/squeemishly/dark_clout/blob/readme_update/app/assets/images/dark-clout.png?raw=true)
 
 ## Overview
 
@@ -74,6 +74,12 @@ A visual representation of the schema is here:
     * your photo and comment activity broke up by year. 
     
  * For a full breakdown of features, visit the [original repo](https://github.com/turingschool-projects/grab_bag):
+ 
+### Pictures
+
+![storage stats](https://github.com/squeemishly/dark_clout/blob/readme_update/app/assets/images/storage_stats.jpg?raw=true)
+
+![fb photos comments](https://github.com/squeemishly/dark_clout/blob/readme_update/app/assets/images/comments_photos_chart.jpg?raw=true)
 
 ### Design
 * [Materialize](http://materializecss.com/)
