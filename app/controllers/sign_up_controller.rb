@@ -31,6 +31,7 @@ private
     session.delete(:user_info)
     user.update(facebook_user_params)
     session[:user_id] = user.id
+    FacebookPhotoWorker.perform_async(current_user.id)
     redirect_to user.home.url, success: 'Account Created!'
   end
 

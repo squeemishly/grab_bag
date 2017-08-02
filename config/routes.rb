@@ -1,7 +1,36 @@
 Rails.application.routes.draw do
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   root 'landing#index', as: :landing_page
+
+  namespace :api do
+    namespace :v1 do
+      get '/user', to: "users#show"
+      namespace :file do
+        get '/adjectives', to: "file#topwords_adjectives"
+        get '/nouns', to: "file#topwords_nouns"
+        get '/american', to: "file#american?"
+        get '/camera_type', to: "file#camera_type"
+        get '/document_types', to: "file#document_types"
+      end
+      namespace :meta_data do
+        namespace :photos do
+          get '/locations', to: "locations#index"
+          get '/locations_by_year', to: 'locations#show'
+          get '/filtered_by_year', to: 'filtered_by_year#index'
+        end
+      end
+      namespace :facebook do
+        get '/facebook_commenters', to: 'facebook_commenters#index'
+        get '/facebook_taggers', to: 'facebook_taggers#index'
+        get '/facebook_reactions', to: 'facebook_reactions#index'
+        get '/photos', to: "fb_photo#index"
+        get '/comments', to: "fb_comment#index"
+        get '/photos_comments', to: "fb_photo_comment#index"
+      end
+    end
+  end
 
   get '/auth/facebook', as: :facebook_login
   get '/auth/facebook/callback', to: "sessions#create", as: :facebook_callback
@@ -15,6 +44,9 @@ Rails.application.routes.draw do
   get '/sign_up', to: 'sign_up#new'
   post '/sign_up', to: 'sign_up#create'
   get 'signout', to: 'sessions#destroy', as: 'signout'
+
+  resources :dashboard, only: [:index]
+  resources :photos, only: [:index]
 
   resources :public_folders, only: :index
   namespace :users, path: ":username" do

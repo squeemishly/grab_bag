@@ -1,0 +1,106 @@
+<div class="row" id="cloud-storage-stats">
+  <br>
+  <h3>Cloud Storage Stats</h3>
+  <br><br><br><br><br>
+  <div class="col s4">
+    <div class="verbage_chart">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+      </canvas><canvas id="verbage_chart"></canvas>
+      <%= javascript_include_tag "charts/verbage_pie_chart.js" %>
+    </div>
+  </div>
+
+  <div class="col s4">
+    <div class="camera-models">
+      <canvas id="camera_type_chart" class="pie-chart"></canvas>
+      <%= javascript_include_tag "charts/camera_type_chart.js" %>
+    </div>
+  </div>
+
+  <div class="col s4">
+    <div class="document-types">
+      <canvas id="document_types_chart" class="pie-chart"></canvas>
+      <%= javascript_include_tag "charts/document_types_chart.js" %>
+    </div>
+  </div>
+
+</div>
+
+<div class="row">
+  <br><br><br><br><br><br><br><br><br><br>
+<h3>Queen's English</h3>
+<br><br><br>
+<div class="col s4"></div>
+  <div class="col s4">
+    <div class="commonwealth-percentage">
+      <canvas id="commonwealth"></canvas>
+      <%= javascript_include_tag "charts/commonwealth.js" %>
+    </div>
+  </div>
+  <div class="col s4"></div>
+</div>
+
+<div class="row" id="facebook-stats">
+  <br><br><br>
+  <h3>Facebook Statistics</h3>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <div class="col s4">
+    <div class="facebook-likers">
+      <canvas id="likers"></canvas>
+      <%= javascript_include_tag "charts/likers.js" %>
+    </div>
+  </div>
+
+  <div class="col s4">
+    <div class="facebook-commenters">
+      <canvas id="comments"></canvas>
+      <%= javascript_include_tag "charts/comments.js" %>
+    </div>
+  </div>
+
+  <div class="col s4">
+    <div class="facebook-taggers">
+      <canvas id="taggers"></canvas>
+      <%= javascript_include_tag "charts/taggers.js" %>
+    </div>
+  </div>
+</div>
+
+<%= javascript_include_tag "ammap_3.21.3.free/ammap/ammap.js" %>
+<%= javascript_include_tag "map_locations.js" %>
+
+<div class="row" id="photos-by-year">
+  <br><br><br><br><br>
+  <h3>Photos by Year</h3>
+  <div class="col s2"></div>
+  <div class="col s7">
+    <div id="maps">
+      <div id="ammap" class="mapdiv" style="visibility: visible;"></div>
+    </div>
+  </div>
+  <div class="col s2">
+    <div id='slider-step'></div>
+    <div id='slider-step-value'></div>
+  </div>
+  <div class="col s1"></div>
+</div>
+
+<div class="row" id="facebook-photos-comments">
+  <br><br><br><br><br>
+  <h3>Photos and Comments by Year</h3>
+  <br><br><br><br><br>
+  <div class="col s2"></div>
+  <div class="col s6">
+    <div class="facebook-photos-comments">
+      <canvas id="photos-comments"></canvas>
+      <%= javascript_include_tag "charts/fb_photo_comment_chart.js" %>
+    </div>
+  </div>
+  <div class="col s2">
+    <div id='slider-step-2'></div>
+    <div id='slider-step-value-2'></div>
+  </div>
+  <div class="col s2"></div>
+</div>
+<div style="height:150px;"></div>
