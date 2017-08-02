@@ -82,6 +82,4 @@ Rails.application.routes.draw do
     get '/*route', to: 'folders#show', as: :folder
     get '/', to: 'users#show'
   end
-
-  resources :photos, only: [:index]
 end
