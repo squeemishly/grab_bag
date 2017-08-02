@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_secure_password validations: false
 
+
   with_options if: ->(u){u.fb_id.nil?} do |user|
     user.validate do |record|
       record.errors.add(:password, :blank) unless record.password_digest.present?
@@ -27,7 +28,7 @@ class User < ApplicationRecord
   has_many :folders_shared_with, through: :shared_folders, source: :folder
   has_many :owned_folders, class_name: "Folder", foreign_key: "user_id"
   has_many :comments
-  has_many :folders
+  has_many :folders, dependent: :destroy
 
   has_many :meta_data_photos
   has_many :fb_comments
