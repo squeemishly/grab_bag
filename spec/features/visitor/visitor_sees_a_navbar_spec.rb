@@ -7,7 +7,7 @@ RSpec.feature 'Visitors can see a navbar' do
     within '.nav-wrapper' do
       expect(page).to have_link 'Login With Facebook'
       expect(page).to have_link 'Public Folders'
-      expect(page).to have_link 'Dark Clout'
+      expect(page).to have_link 'Grab Bag'
     end
   end
 end

@@ -23,13 +23,29 @@ $.ajax({
                 fontColor: '#3498db',
                 text: 'Top 5 Facebook Commenters'
               },
-              scales: {
+                            scales: {
                   yAxes: [{
+                    display: true,
+                    gridLines: {
+                      display : false
+                    },
                       ticks: {
                           beginAtZero:true
                       }
+                  }],
+                  xAxes: [{
+                    display: true,
+                    gridLines: {
+                      display : false
+                    },
+                      ticks: {
+                        autoSkip:false,
+                        maxRotation:30,
+                        minRotation:30,
+                        fontSize:11
+                      }
                   }]
-              }
+                }
             }
           });
     }

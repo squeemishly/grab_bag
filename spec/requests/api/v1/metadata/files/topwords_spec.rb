@@ -37,6 +37,6 @@ describe "can receive json information do" do
     get '/api/v1/file/american'
     result_american = JSON.parse(response.body, :symbolize_names => true)
 
-    expect(result_american[:commonwealth]).to eq(11)
+    expect(result_american[:nouns]).to eq(11)
   end
 end
