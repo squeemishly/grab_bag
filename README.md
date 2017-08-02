@@ -66,7 +66,7 @@ A visual representation of the schema is here:
     * the most popular adjectives found in the users uploaded documents.
     * all files uploaded and the filetype breakdown.
     * the camera model breakdown.
-    * the percentage of nouns that you use, that comform to British vs American spelling.
+    * the percentage of nouns that you use that conform to British vs American spelling.
     * your top 5 'Likers' on Facebook
     * your top 5 'Commenters' on Facebook
     * your top 5 'Taggers' on Facebook
