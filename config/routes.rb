@@ -21,6 +21,7 @@ Rails.application.routes.draw do
         namespace :photos do
           get '/locations', to: "locations#index"
           get '/locations_by_year', to: 'locations#show'
+          get '/filtered_by_year', to: "filtered_by_year#index"
         end
       end
       namespace :facebook do

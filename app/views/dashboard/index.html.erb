@@ -44,24 +44,24 @@
 <div class="row" id="facebook-stats">
   <br><br><br>
   <h3>Facebook Statistics</h3>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <div class="col s4">
+  <br><br><br>
+  <div class="container col xl4 l12">
     <div class="facebook-likers">
-      <canvas id="likers"></canvas>
+      <canvas id="likers" width="200" height="200"></canvas>
       <%= javascript_include_tag "charts/likers.js" %>
     </div>
   </div>
 
-  <div class="col s4">
+  <div class="container col xl4 l12">
     <div class="facebook-commenters">
-      <canvas id="comments"></canvas>
+      <canvas id="comments" width="200" height="200"></canvas>
       <%= javascript_include_tag "charts/comments.js" %>
     </div>
   </div>
 
-  <div class="col s4">
+  <div class="container col xl4 l12">
     <div class="facebook-taggers">
-      <canvas id="taggers"></canvas>
+      <canvas id="taggers" width="200" height="200"></canvas>
       <%= javascript_include_tag "charts/taggers.js" %>
     </div>
   </div>
@@ -91,11 +91,15 @@
   <h3>Photos and Comments by Year</h3>
   <br><br><br><br><br>
   <div class="col s2"></div>
-  <div class="col s8">
+  <div class="col s6">
     <div class="facebook-photos-comments">
       <canvas id="photos-comments"></canvas>
       <%= javascript_include_tag "charts/fb_photo_comment_chart.js" %>
     </div>
+  </div>
+  <div class="col s2">
+    <div id='slider-step-2'></div>
+    <div id='slider-step-value-2'></div>
   </div>
   <div class="col s2"></div>
 </div>

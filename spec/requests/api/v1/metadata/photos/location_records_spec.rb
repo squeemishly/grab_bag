@@ -15,10 +15,10 @@ RSpec.describe "photo locations meta data records api" do
       result = JSON.parse(response.body)
 
       expect(response).to have_http_status(200)
-      expect(result.first["latitude"]).to eq(metadata_1.lat)
-      expect(result.first["longitude"]).to eq(metadata_1.long)
-      expect(result.last["latitude"]).to eq(metadata_3.lat)
-      expect(result.last["longitude"]).to eq(metadata_3.long)
+      expect(result.first["lat"]).to eq(metadata_1.lat)
+      expect(result.first["long"]).to eq(metadata_1.long)
+      expect(result.last["lat"]).to eq(metadata_3.lat)
+      expect(result.last["long"]).to eq(metadata_3.long)
     end
 
     # it "returns the current users photo location meta data sorted by year" do
@@ -39,7 +39,7 @@ RSpec.describe "photo locations meta data records api" do
     #   get '/api/v1/meta_data/photos/locations_by_year'
 
     #   result = JSON.parse(response.body)
-      
+
     #   expect(response).to have_http_status(200)
     #   expect(result["1993"].first["latitude"]).to eq(metadata_1.lat)
     #   expect(result["1993"].first["longitude"]).to eq(metadata_1.long)

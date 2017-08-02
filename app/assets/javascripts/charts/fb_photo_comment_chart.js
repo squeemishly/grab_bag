@@ -90,17 +90,11 @@ var showPost = function(year) {
 
 
 
-var showPost = function(year) {
-  return $.ajax({
-    url: API + '/api/v1/facebook/photos_comments',
-    method: 'GET',
-    data: { year: year }
-  }).done(function(post){
 
   })
 };
 
-var stepSlider = document.getElementById('slider-step');
+var stepSlider = document.getElementById('slider-step-2');
 
 noUiSlider.create(stepSlider, {
   start: [ 2017 ],

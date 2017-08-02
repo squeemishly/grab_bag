@@ -107,6 +107,41 @@ ActiveRecord::Schema.define(version: 20170731234859) do
     t.index ["user_id"], name: "index_likes_on_user_id", using: :btree
   end
 
+  create_table "meta_data_files", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "binaries_id"
+    t.string   "text"
+    t.integer  "word_count"
+    t.string   "top_adjective", default: [],              array: true
+    t.string   "top_noun",      default: [],              array: true
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.string   "extension"
+    t.index ["binaries_id"], name: "index_meta_data_files_on_binaries_id", using: :btree
+    t.index ["user_id"], name: "index_meta_data_files_on_user_id", using: :btree
+  end
+
+  create_table "meta_data_photos", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "width"
+    t.integer  "height"
+    t.string   "model"
+    t.string   "shutter_speed"
+    t.float    "aperture"
+    t.float    "lat"
+    t.float    "long"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "image"
+    t.string   "created_time"
+    t.string   "fb_uname"
+    t.string   "fb_uid"
+    t.string   "fb_photo_id"
+    t.integer  "fb_place_id"
+    t.index ["fb_place_id"], name: "index_meta_data_photos_on_fb_place_id", using: :btree
+    t.index ["user_id"], name: "index_meta_data_photos_on_user_id", using: :btree
+  end
+
   create_table "shared_folders", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "folder_id"
@@ -144,6 +179,9 @@ ActiveRecord::Schema.define(version: 20170731234859) do
   add_foreign_key "folders", "folders"
   add_foreign_key "folders", "users"
   add_foreign_key "likes", "users"
+  add_foreign_key "meta_data_files", "binaries", column: "binaries_id"
+  add_foreign_key "meta_data_files", "users"
+  add_foreign_key "meta_data_photos", "users"
   add_foreign_key "shared_folders", "folders"
   add_foreign_key "shared_folders", "users"
 end

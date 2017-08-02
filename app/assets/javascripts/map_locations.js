@@ -1,4 +1,4 @@
-$(document).ready(function() {  
+$(document).ready(function() {
   var year = 2017;
   getPhotos(year);
 })
