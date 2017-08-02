@@ -1,3 +1,5 @@
+require 'exifr/jpeg'
+
 class DataSlurper
 
   def initialize(path, extension, current_user, binary_id)
