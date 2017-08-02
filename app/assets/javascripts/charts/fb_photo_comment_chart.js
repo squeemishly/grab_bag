@@ -4,6 +4,7 @@ var showPost = function(year) {
     method: 'GET',
     data: { year: year }
   }).done(function(post){
+    debugger;
         var canvas = document.getElementById("photos-comments");
         var ctx = canvas.getContext('2d');
 
