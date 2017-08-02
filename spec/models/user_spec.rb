@@ -4,7 +4,6 @@ RSpec.describe User do
   context 'validations' do
     it do
       is_expected.to validate_presence_of :username
-      # is_expected.to validate_presence_of :email
       is_expected.to validate_presence_of :name
       is_expected.to validate_presence_of :status
       is_expected.to validate_presence_of :phone

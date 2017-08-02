@@ -14,7 +14,7 @@ attr_reader :json_output
                     "09" => 0,
                     "10" => 0,
                     "11" => 0,
-                  "12" => 0}
+                    "12" => 0}
   end
 
   def joined_photo_comment
