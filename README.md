@@ -1,7 +1,7 @@
 # GRAB BAG - Dark Clout Edition
 ## How much information are you giving up?
 
-
+![Image of Yaktocat](https://github.com/squeemishly/dark_clout/blob/readme_update/app/assets/images/dark-clout.png?raw=true)
 
 ## Overview
 
