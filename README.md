@@ -1,8 +1,11 @@
-# GRAB BAG
+# GRAB BAG - Dark Clout Edition
 ## The hottest new way to store and share your files and see just what Facebook is giving out when you authorize with them.
+
+
 
 ## Overview
 
+The goal of Dark Clout was to show users exactly what type of information they are giving up when they choose to use an upload service and login with Facebook.
 The goal of this project was to inherit an already working codebase and build upon the existing functionality.
 The original app was a clone of 'Dropbox', so we opted to use your documents, images and Facebook 'public profile' and photos to visualize how much information you are exposing when you authorize with Facebook.
 
