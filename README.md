@@ -1,13 +1,13 @@
 # GRAB BAG - Dark Clout Edition
-## The hottest new way to store and share your files and see just what Facebook is giving out when you authorize with them.
+## How much information are you giving up?
 
 
 
 ## Overview
 
-The goal of Dark Clout was to show users exactly what type of information they are giving up when they choose to use an upload service and login with Facebook.
-The goal of this project was to inherit an already working codebase and build upon the existing functionality.
-The original app was a clone of 'Dropbox', so we opted to use your documents, images and Facebook 'public profile' and photos to visualize how much information you are exposing when you authorize with Facebook.
+The goal of Dark Clout is to show users exactly what type of information they are giving up when they choose to use an upload service and login with Facebook. Our group wanted to expose how much information Facebook gives developers with the seemingly harmless public information permission. Using easy to understand charts, Dark Clout exposes your virtual profile.
+
+This brownfield project, originally named Grab Bag, was designed to mimic the functionality of Dropbox by giving users the ability to upload images and files using the S3 Bucket.  
 
 ### Stack
 This site is built with Javascript, SASS, CSS, Materialize, AJAX, ChartsJS, AM Charts, Postgresql, Rails 5.1.2, Ruby version 2.4.1, Redis, Sidekiq, Facebook API.
