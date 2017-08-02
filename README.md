@@ -78,10 +78,6 @@ A visual representation of the schema is here:
 ### Design
 * [Materialize](http://materializecss.com/)
 
-### Test Suite
-
-* The test suite tests the application on multiple levels. To run all of the tests, run `rspec` from the terminal in the main directory of the project. The feature tests (integration tests) rely mainly on the [capybara gem](https://github.com/jnicklas/capybara) for navigating the various application views.
-
 ### Contributors
 
 * [Natalia Colomé](https://github.com/nmcolome)
