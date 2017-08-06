@@ -56,8 +56,7 @@ You can setup your redis keys as the standard:
 
 ### Schema
 
-A visual representation of the schema is here:
-![schema pic](app/assets/images/30_july_schema.png?raw=true)
+[You can find our schema here](http://ondras.zarovi.cz/sql/demo/?keyword=dark-clout-1703be)
 
 ### Features
 
@@ -77,9 +76,13 @@ A visual representation of the schema is here:
  
 ### Pictures
 
-![storage stats](https://github.com/squeemishly/dark_clout/blob/readme_update/app/assets/images/storage_stats.jpg?raw=true)
+![storage stats](https://github.com/squeemishly/dark_clout/blob/readme_update/app/assets/images/Cloud_Storage_Stats.png?raw=true)
 
-![fb photos comments](https://github.com/squeemishly/dark_clout/blob/readme_update/app/assets/images/comments_photos_chart.jpg?raw=true)
+![fb photos comments](https://github.com/squeemishly/dark_clout/blob/readme_update/app/assets/images/Facebook_Stats.png?raw=true)
+
+![fb photos map](https://github.com/squeemishly/dark_clout/blob/readme_update/app/assets/images/Facebook_Map.png?raw=true)
+
+![fb comments_by_year](https://github.com/squeemishly/dark_clout/blob/readme_update/app/assets/images/Facebook_Comments_By_Year.png?raw=true)
 
 ### Design
 * [Materialize](http://materializecss.com/)
