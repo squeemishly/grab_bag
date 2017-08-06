@@ -78,7 +78,7 @@ You can setup your redis keys as the standard:
 
 ![storage stats](https://github.com/squeemishly/dark_clout/app/assets/images/Cloud_Storage_Stats.png?raw=true)
 
-![fb photos comments](https://github.com/squeemishly/dark_clout/blob/readme_update/app/assets/images/Facebook_Stats.png?raw=true)
+![fb photos comments](https://github.com/squeemishly/dark_clout/blob/readme_update/app/assets/images/Facebook_Stats.png)
 
 ![fb photos map](https://github.com/squeemishly/dark_clout/blob/readme_update/app/assets/images/Facebook_Map.png?raw=true)
 
