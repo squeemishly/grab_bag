@@ -70,19 +70,19 @@ You can setup your redis keys as the standard:
     * your top 5 'Commenters' on Facebook
     * your top 5 'Taggers' on Facebook
     * your photos locations broken up by year and displayed on a map
-    * your photo and comment activity broke up by year. 
-    
+    * your photo and comment activity broke up by year.
+
  * For a full breakdown of features, visit the [original repo](https://github.com/turingschool-projects/grab_bag):
- 
+
 ### Pictures
 
-![storage stats](https://github.com/squeemishly/dark_clout/app/assets/images/Cloud_Storage_Stats.png?raw=true)
+![storage stats](https://github.com/squeemishly/dark_clout/app/assets/images/Cloud_Storage_Stats.jpeg?raw=true)
 
-![fb photos comments](https://github.com/squeemishly/dark_clout/blob/readme_update/app/assets/images/Facebook_Stats.png)
+![fb photos comments](https://github.com/squeemishly/dark_clout/blob/readme_update/app/assets/images/Facebook_Stats.jpeg?raw=true)
 
-![fb photos map](https://github.com/squeemishly/dark_clout/blob/readme_update/app/assets/images/Facebook_Map.png?raw=true)
+![fb photos map](https://github.com/squeemishly/dark_clout/blob/readme_update/app/assets/images/Photos_By_Year.jpeg?raw=true)
 
-![fb comments_by_year](https://github.com/squeemishly/dark_clout/blob/readme_update/app/assets/images/Facebook_Comments_By_Year.png?raw=true)
+![fb comments_by_year](https://github.com/squeemishly/dark_clout/blob/readme_update/app/assets/images/Photos_And_Comments_By_Year.jpeg?raw=true)
 
 ### Design
 * [Materialize](http://materializecss.com/)
