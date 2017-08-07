@@ -76,13 +76,13 @@ You can setup your redis keys as the standard:
 
 ### Pictures
 
-[[https://github.com/squeemishly/dark_clout/app/assets/images/Cloud_Storage_Stats.jpeg?raw=true]]
+[![storage stats](]https://github.com/squeemishly/dark_clout/blob/development/app/assets/images/Cloud_Storage_Stats.jpeg?raw=true)
 
 ![fb photos comments](https://github.com/squeemishly/dark_clout/blob/development/app/assets/images/Facebook_Stats.jpeg?raw=true)
 
-![fb photos map](https://github.com/squeemishly/dark_clout/blob/readme_update/app/assets/images/Photos_By_Year.jpeg)
+![fb photos map](https://github.com/squeemishly/dark_clout/blob/development/app/assets/images/Photos_By_Year.jpeg?raw=true)
 
-[[https://github.com/squeemishly/dark_clout/blob/readme_update/app/assets/images/Photos_And_Comments_By_Year.jpeg?raw=true]]
+![fb comments_by_year](https://github.com/squeemishly/dark_clout/blob/development/app/assets/images/Photos_And_Comments_By_Year.jpeg?raw=true)
 
 ### Design
 * [Materialize](http://materializecss.com/)
